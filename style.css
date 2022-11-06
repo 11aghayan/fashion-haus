@@ -1,0 +1,442 @@
+/*  1. General
+    2. Common
+    3. Fashion Fits Section
+    4.Bagm Section
+    5. Sign Up Section
+    6. Media
+*/
+
+/* 1. General */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    letter-spacing: -0.03em;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --accent-color: #2945FF;
+    --accent-color-active: #1f37cf;
+    --header-color: #000545;
+    --para-color: #393F4D;
+}
+
+.content {
+    width: 100%;
+    padding: 0 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 0;
+}
+
+/* 2. Common */
+
+.header {
+    color: var(--header-color);
+    font-weight: 600;
+    line-height: 111%;
+    margin: 0;
+}
+
+.section-name {
+    color: var(--accent-color, #2945FF);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+}
+
+.learn-more {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--accent-color, #2945FF);
+    margin: 15px 0 0;
+    position: relative;
+}
+
+.learn-more::after {
+    content: "";
+    width: 20px;
+    border-top: 2px solid;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+}
+
+/* 3. Fashion Fits Section */
+
+.fashion-fits-section {
+    width: 100%;
+    margin-top: 110px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.asian-girl-div {
+    position: relative;
+}
+
+.asian-girl-img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.dots-asian-girl {
+    position: absolute;
+}
+
+.dots-asian-girl-top {
+    top: -5%;
+    left: -9%;
+    z-index: -1;
+}
+
+.dots-asian-girl-bottom {
+    bottom: -5%;
+    right: -4.8%;
+}
+
+.fashion-fits-description {
+    max-width: 445px;
+}
+
+.fashion-fits-header-1 {
+    font-size: 68px;
+}
+
+.fashion-fits-header-2 {
+    font-size: 51px;
+    display: none;
+}
+
+.fashion-fits-para {
+    color: var(--para-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 25px 0 0;
+}
+
+.fashion-fits-learn-more {
+    margin: 24px 0 0;
+    background-color: var(--accent-color);
+    padding: 19px 42px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    max-width: 178px;
+    border-radius: 100px;
+}
+
+.fashion-fits-learn-more:hover {
+    opacity: 0.97;
+    box-shadow: 0 0 17px var(--accent-color);
+    cursor: pointer;
+}
+
+.fashion-fits-learn-more:active {
+    background-color: var(--accent-color-active);
+}
+
+.fashion-fits-link {
+    text-decoration: none;
+}
+
+/* 4. Bag Section */
+
+.bag-section {
+    width: 100%;
+    padding: 90px 0 0;
+}
+
+.bags-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.know-your-bags {
+    font-size: 51px;
+}
+
+.bag {
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+}
+
+.bag:hover {
+    background-color: var(--accent-color, #2945FF);
+    box-shadow: 0px 11px 17px rgba(41, 69, 255, 0.2);
+    border-radius: 24px;
+    cursor: url(img/cursor.png), auto;
+}
+
+.bag:hover .bag-header, 
+.bag:hover .bag-para,
+.bag:hover .learn-more {
+    color: #fff;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.bag-img {
+    width: 110px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.bag-types {
+    display: flex;
+    gap: 65px;
+    padding: 100px 0 0;
+}
+
+.bag-header {
+    margin: 35px 0 0;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 111%;
+}
+
+.bag-para {
+    margin: 16px 0 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+/* 5. Sign Up Section*/
+
+.sign-up-section {
+    width: 100%;
+    max-width: 1140px;
+    margin-top: 130px;
+    position: relative;
+}
+
+.sign-up-bg {
+    background-image: url(img/boy.png);
+    background-size: cover;
+    padding-top: 63%;
+    position: relative;
+}
+
+.sign-up-bg::after {
+    content: "";
+    width: 93%;
+    height: 78%;
+    background-color: var(--accent-color);
+    position: absolute;
+    top: -3.5%;
+    right: -3.3%;
+    z-index: -1;
+}
+
+.dots-sign-up {
+    position: absolute;
+    z-index: -11;
+}
+
+.top-dotts-sign-up {
+    top: -3.3%;
+    left: -1.7%;
+}
+
+.bottom-dotts-sign-up {
+    bottom: -6%;
+    right: -3.3%;
+}
+
+.sign-up-description {
+    position: absolute;
+    top: 16%;
+    right: 7.5%;
+    max-width: 380px;
+}
+
+.sign-up-header {
+    margin: 0;
+    font-weight: 600;
+    font-size: 68px;
+    line-height: 111%;
+    color: #fff;
+}
+
+.sign-up-para {
+    margin: 15px 0 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #fff;
+}
+
+.sign-up-btn {
+    margin: 50px 0 0;
+    background-color: var(--accent-color);
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    padding: 19px 38px;
+    border: none;
+    border-radius: 100px;
+}
+
+.sign-up-btn:hover {
+    opacity: 0.97;
+    box-shadow: 0 0 17px var(--accent-color);
+    cursor: pointer;
+}
+
+.sign-up-btn:active {
+    background-color: var(--accent-color-active);
+}
+
+/* 6. Media */
+
+
+@media screen and (max-width: 1279px) {
+
+    .content {
+        padding: 0 25px;
+    }
+
+    /* Fashion Fits Section */
+
+    .fashion-fits-section {
+        margin: 70px 0 0;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .asian-girl-div {
+        margin: 0 10px;
+    }
+
+    .dots-asian-girl {
+        width: 25%;
+        height: 32%;
+    }
+
+    .dots-asian-girl-top {
+        top: -5.6%;
+        left: -6.7%;
+    }
+
+    .fashion-fits-description {
+        max-width: none;
+    }
+
+    .fashion-fits-header-1 {
+        display: none;
+    }
+
+    .fashion-fits-header-2 {
+        display: block;
+    }
+    
+    .fashion-fits-para {
+        font-size: 16px;
+        margin: 24px 0 0;
+    }
+    
+    .fashion-fits-learn-more {
+        margin: 35px 0 0;
+        max-width: none;
+        text-align: center;
+    }
+
+    .fashion-fits-learn-more:hover {
+        opacity: 1;
+        box-shadow: none;
+    }
+
+    /* Bag Section */
+
+    .bag-section {
+        padding: 55px 0 0;
+    }
+
+    .bags-header {
+        gap: 15px;
+        padding-left: 10px;
+    }
+
+    .know-your-bags {
+        font-size: 38px;
+    }
+
+    .bag-types {
+        gap: 70px;
+        padding: 50px 0 0;
+        flex-direction: column;
+    }
+
+    .bag {
+        padding: 20px;
+        align-items: center;
+    }
+
+    .bag-para {
+        text-align: center;
+    }
+
+    .bag-section .learn-more::after {
+        left: calc(50% - 10px);
+    }
+
+    /* Sign Up section */
+
+    .sign-up-section {
+        margin-top: 40px;
+    }
+
+    .dots-sign-up {
+        display: none;
+    }
+
+    .sign-up-bg::after {
+        display: none;
+    }
+
+    .sign-up-description {
+        position: static;
+        background-color: var(--accent-color);
+        padding: 20px 12px;
+        max-width: none;
+    }
+
+    .sign-up-header {
+        font-size: 37px;
+    }
+
+    .sign-up-para {
+        margin: 6px 0 0;
+        font-size: 10px;
+        line-height: 173%;
+    }
+
+    .sign-up-btn {
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid #fff;
+        margin: 20px 0 0;
+        font-size: 12px;
+        padding: 17px 75px;
+    }
+}
