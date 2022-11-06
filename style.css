@@ -133,11 +133,41 @@ body {
     cursor: pointer;
 }
 
+.menu {
+    display: none;
+    align-self: center;
+    width: 7%;
+    height: 7%;
+    background-color: var(--accent-color);
+    border-radius: 26px;
+    position: relative;
+}
+
+.menu::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-color);
+    border-radius: 26px;
+    position: absolute;
+    top: -4px;
+}
+
+.menu::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-color);
+    border-radius: 26px;
+    position: absolute;
+    bottom: -4px;
+}
+
 /* 4. Fashion Fits Section */
 
 .fashion-fits-section {
     width: 100%;
-    margin-top: 110px;
+    margin-top: 100px;
     display: flex;
     justify-content: space-between;
 }
@@ -312,12 +342,12 @@ body {
     z-index: -11;
 }
 
-.top-dotts-sign-up {
+.top-dots-sign-up {
     top: -3.3%;
     left: -1.7%;
 }
 
-.bottom-dotts-sign-up {
+.bottom-dots-sign-up {
     bottom: -6%;
     right: -3.3%;
 }
@@ -374,6 +404,17 @@ body {
 
     .content {
         padding: 0 25px;
+    }
+
+    /* Nav Section */
+
+    .navbar {
+        display: none;
+        width: 100%;
+    }
+
+    .menu {
+        display: initial;
     }
 
     /* Fashion Fits Section */
