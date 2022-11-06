@@ -9,9 +9,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script>
+        function openMenu() {
+        document.getElementById("navMobile").style.display = "block";
+        }
+        function closeMenu() {
+        document.getElementById("navMobile").style.display = "none";
+        }
+    </script>
 </head>
 <body>
     <main class="main">
+        <div class="nav-mobile" id="navMobile">
+            <ul class="nav-mobile-list">
+                <li class="nav-mobile"><a class="nav-mobile-link" href="#fashionFitsSection">News Reel</a></li>
+                <li class="nav-mobile"><a class="nav-mobile-link" href="#bagSection">Bags</a></li>
+                <li class="nav-mobile"><a class="nav-mobile-link" href="#">Reviews</a></li>
+                <li class="nav-mobile"><a class="nav-mobile-link" href="#signUpSection">Sign up</a></li>
+                <li class="nav-mobile"><a class="nav-mobile-link" href="#">Brands</a></li>
+                <li class="nav-mobile"><a class="nav-mobile-link" href="#">Latest News</a></li>
+            </ul>
+            <button class="close-menu" onclick="closeMenu()"></button>
+        </div>
         <div class="content">
             <section class="nav-section">
                <a href="index.html" class="main-header-link">    
@@ -27,7 +46,7 @@
                     <li class="nav-item"><a class="nav-item-link" href="#">Brands</a></li>
                     <li class="nav-item"><a class="nav-item-link" href="#">Latest News</a></li>
                 </ul>
-                <span class="menu"></span>
+                <button class="menu" onclick="openMenu()"></button>
             </section>
             <section class="fashion-fits-section" id="fashionFitsSection">
                 <div class="fashion-fits-description">
