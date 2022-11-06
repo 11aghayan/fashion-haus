@@ -11,27 +11,32 @@
     <link rel="stylesheet" href="style.css">
     <script>
         function openMenu() {
+        document.getElementById("content").style.display = "none";
         document.getElementById("navMobile").style.display = "block";
         }
         function closeMenu() {
         document.getElementById("navMobile").style.display = "none";
+        document.getElementById("content").style.display = "initial";
         }
     </script>
 </head>
 <body>
     <main class="main">
         <div class="nav-mobile" id="navMobile">
-            <ul class="nav-mobile-list">
-                <li class="nav-mobile"><a class="nav-mobile-link" href="#fashionFitsSection">News Reel</a></li>
-                <li class="nav-mobile"><a class="nav-mobile-link" href="#bagSection">Bags</a></li>
-                <li class="nav-mobile"><a class="nav-mobile-link" href="#">Reviews</a></li>
-                <li class="nav-mobile"><a class="nav-mobile-link" href="#signUpSection">Sign up</a></li>
-                <li class="nav-mobile"><a class="nav-mobile-link" href="#">Brands</a></li>
-                <li class="nav-mobile"><a class="nav-mobile-link" href="#">Latest News</a></li>
-            </ul>
             <button class="close-menu" onclick="closeMenu()"></button>
+            <h2 class="header-mobile-menu">
+                Fashion Haus
+            </h2>
+            <ul class="nav-mobile-list">
+                <li class="nav-mobile-item"><a href="#fashionFitsSection" onclick="closeMenu()" class="nav-mobile-link">News Reel</a></li>
+                <li class="nav-mobile-item"><a href="#bagSection" onclick="closeMenu()" class="nav-mobile-link">Bags</a></li>
+                <li class="nav-mobile-item"><a href="#" onclick="closeMenu()" class="nav-mobile-link">Reviews</a></li>
+                <li class="nav-mobile-item"><a href="#signUpSection" onclick="closeMenu()" class="nav-mobile-link">Sign Up</a></li>
+                <li class="nav-mobile-item"><a href="#" onclick="closeMenu()" class="nav-mobile-link">Brands</a></li>
+                <li class="nav-mobile-item"><a href="#" onclick="closeMenu()" class="nav-mobile-link">Latest News</a></li>
+            </ul>
         </div>
-        <div class="content">
+        <div class="content" id="content">
             <section class="nav-section">
                <a href="index.html" class="main-header-link">    
                     <h1 class="main-header">
