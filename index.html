@@ -9,25 +9,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script>
+            function openMenu() {
+            document.getElementById("navBar").style.display = "flex";
+            document.getElementById("navSection").style.backgroundColor = "var(--accent-color)";
+            document.getElementById("mainHeader").style.color = "#fff";
+            document.getElementById("closeMenu").style.display = "initial";
+            document.getElementById("headerDash").style.borderColor = "#fff";
+        }
+        function closeMenu() {
+            document.getElementById("navBar").style.display = "none";
+            document.getElementById("navSection").style.backgroundColor = "transparent";
+            document.getElementById("mainHeader").style.color = "#000";
+            document.getElementById("closeMenu").style.display = "none";
+            document.getElementById("headerDash").style.borderColor = "var(--accent-color)";
+        }
+    </script>
 </head>
 <body>
     <main class="main">
-        <div class="content">
-            <section class="nav-section">
-               <a href="index.html" class="main-header-link">    
-                    <h1 class="main-header">
-                        Fashion Haus
-                    </h1>
-                </a> 
-                <ul class="navbar">
-                    <li class="nav-item"><a class="nav-item-link" href="#fashionFitsSection">News Reel</a></li>
-                    <li class="nav-item"><a class="nav-item-link" href="#bagSection">Bags</a></li>
-                    <li class="nav-item"><a class="nav-item-link" href="#">Reviews</a></li>
-                    <li class="nav-item"><a class="nav-item-link" href="#signUpSection">Sign up</a></li>
-                    <li class="nav-item"><a class="nav-item-link" href="#">Brands</a></li>
-                    <li class="nav-item"><a class="nav-item-link" href="#">Latest News</a></li>
-                </ul>
-            </section>
+        <nav class="nav-section" id="navSection">
+            <a href="index.html" class="main-header-link">    
+                 <h1 class="main-header" id="mainHeader">
+                     Fashion Haus
+                     <div class="header-dash" id="headerDash"></div>
+                 </h1>
+             </a> 
+             <ul class="navbar" id="navBar">
+                 <li class="nav-item"><a class="nav-item-link" href="#fashionFitsSection">News Reel</a></li>
+                 <li class="nav-item"><a class="nav-item-link" href="#bagSection">Bags</a></li>
+                 <li class="nav-item"><a class="nav-item-link" href="#">Reviews</a></li>
+                 <li class="nav-item"><a class="nav-item-link" href="#signUpSection">Sign up</a></li>
+                 <li class="nav-item"><a class="nav-item-link" href="#">Brands</a></li>
+                 <li class="nav-item"><a class="nav-item-link" href="#">Latest News</a></li>
+             </ul>
+            <button class="open-menu" onclick="openMenu()"></button>
+            <button class="close-menu" id="closeMenu" onclick="closeMenu()"></button>
+        </nav>
+        <div class="content" id="content">
             <section class="fashion-fits-section" id="fashionFitsSection">
                 <div class="fashion-fits-description">
                     <h2 class="fashion-fits-header-1 header">
@@ -118,8 +137,8 @@
             </section>
             <section class="sign-up-section" id="signUpSection">
               <div class="sign-up-bg">
-                <img src="img/dots.png" alt="dots" class="dots-sign-up top-dotts-sign-up">
-                <img src="img/dots.png" alt="dots" class="dots-sign-up bottom-dotts-sign-up">
+                <img src="img/dots.png" alt="dots" class="dots-sign-up top-dots-sign-up">
+                <img src="img/dots.png" alt="dots" class="dots-sign-up bottom-dots-sign-up">
               </div>  
               <div class="sign-up-description">
                 <h2 class="sign-up-header">
@@ -131,7 +150,7 @@
                     Fusce felis tellus, malesuada vel cursus et, 
                     sodales sit amet eros. Integer sed justo ac dolor molestie.
                 </p>
-                <button class="sign-up-link">
+                <button class="sign-up-btn">
                     Sign up now
                 </button>
               </div>
