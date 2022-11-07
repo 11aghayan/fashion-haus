@@ -11,48 +11,36 @@
     <link rel="stylesheet" href="style.css">
     <script>
         function openMenu() {
-        document.getElementById("content").style.display = "none";
-        document.getElementById("navMobile").style.display = "block";
+            document.getElementById("navBar").style.display = "flex";
+            document.getElementById("navSection").style.backgroundColor = "var(--accent-color)";
+            document.getElementById("mainHeader").style.color = "#fff";
         }
         function closeMenu() {
-        document.getElementById("navMobile").style.display = "none";
-        document.getElementById("content").style.display = "initial";
+            document.getElementById("navMobile").style.display = "none";
         }
     </script>
 </head>
 <body>
     <main class="main">
-        <div class="nav-mobile" id="navMobile">
-            <button class="close-menu" onclick="closeMenu()"></button>
-            <h2 class="header-mobile-menu">
-                Fashion Haus
-            </h2>
-            <ul class="nav-mobile-list">
-                <li class="nav-mobile-item"><a href="#fashionFitsSection" onclick="closeMenu()" class="nav-mobile-link">News Reel</a></li>
-                <li class="nav-mobile-item"><a href="#bagSection" onclick="closeMenu()" class="nav-mobile-link">Bags</a></li>
-                <li class="nav-mobile-item"><a href="#" onclick="closeMenu()" class="nav-mobile-link">Reviews</a></li>
-                <li class="nav-mobile-item"><a href="#signUpSection" onclick="closeMenu()" class="nav-mobile-link">Sign Up</a></li>
-                <li class="nav-mobile-item"><a href="#" onclick="closeMenu()" class="nav-mobile-link">Brands</a></li>
-                <li class="nav-mobile-item"><a href="#" onclick="closeMenu()" class="nav-mobile-link">Latest News</a></li>
-            </ul>
-        </div>
+        <section class="nav-section" id="navSection">
+            <a href="index.html" class="main-header-link">    
+                 <h1 class="main-header" id="mainHeader">
+                     Fashion Haus
+                 </h1>
+             </a> 
+             <ul class="navbar" id="navBar">
+                 <li class="nav-item"><a class="nav-item-link" href="#fashionFitsSection">News Reel</a></li>
+                 <li class="nav-item"><a class="nav-item-link" href="#bagSection">Bags</a></li>
+                 <li class="nav-item"><a class="nav-item-link" href="#">Reviews</a></li>
+                 <li class="nav-item"><a class="nav-item-link" href="#signUpSection">Sign up</a></li>
+                 <li class="nav-item"><a class="nav-item-link" href="#">Brands</a></li>
+                 <li class="nav-item"><a class="nav-item-link" href="#">Latest News</a></li>
+             </ul>
+             <div class="nav-mobile">
+                 <button class="menu" onclick="openMenu()"></button>
+             </div>
+        </section>
         <div class="content" id="content">
-            <section class="nav-section">
-               <a href="index.html" class="main-header-link">    
-                    <h1 class="main-header">
-                        Fashion Haus
-                    </h1>
-                </a> 
-                <ul class="navbar">
-                    <li class="nav-item"><a class="nav-item-link" href="#fashionFitsSection">News Reel</a></li>
-                    <li class="nav-item"><a class="nav-item-link" href="#bagSection">Bags</a></li>
-                    <li class="nav-item"><a class="nav-item-link" href="#">Reviews</a></li>
-                    <li class="nav-item"><a class="nav-item-link" href="#signUpSection">Sign up</a></li>
-                    <li class="nav-item"><a class="nav-item-link" href="#">Brands</a></li>
-                    <li class="nav-item"><a class="nav-item-link" href="#">Latest News</a></li>
-                </ul>
-                <button class="menu" onclick="openMenu()"></button>
-            </section>
             <section class="fashion-fits-section" id="fashionFitsSection">
                 <div class="fashion-fits-description">
                     <h2 class="fashion-fits-header-1 header">
