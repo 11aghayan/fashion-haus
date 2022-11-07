@@ -21,7 +21,7 @@ body {
     padding: 0;
 }
 
-:root {
+:root { 
     --accent-color: #2945FF;
     --accent-color-active: #1f37cf;
     --header-color: #000545;
@@ -76,7 +76,7 @@ body {
 
 .nav-section {
     width: 100%;
-    padding: 22px 25px 0;
+    padding: 22px 150px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -134,11 +134,8 @@ body {
     cursor: pointer;
 }
 
-.nav-mobile {
+.open-menu {
     display: none;
-}
-
-.menu {
     appearance: none;
     align-self: center;
     width: 7%;
@@ -147,28 +144,20 @@ body {
     border: none;
     border-radius: 26px;
     position: relative;
+    margin-right: 25px;
 }
 
-.menu::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: var(--accent-color);
-    border-radius: 26px;
-    position: absolute;
-    top: -4px;
-    left: 0;
-}
-
-.menu::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: var(--accent-color);
-    border-radius: 26px;
-    position: absolute;
-    bottom: -4px;
-    left: 0;
+.close-menu {
+    display: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    margin-right: 25px;
+    border: none;
+    background-image: url(/img/x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent
 }
 
 /* 4. Fashion Fits Section */
@@ -418,7 +407,12 @@ body {
 
     .nav-section {
         flex-wrap: wrap;
-        padding-top: 12px;
+        padding: 12px 0 0;
+        
+    }
+
+    .main-header {
+        padding-left: 25px;
     }
 
     .navbar {
@@ -433,6 +427,16 @@ body {
     .nav-item {
         background-image: url(/img/mobile-menu.png);
         background-position: -60px -30px;
+        padding: 0 25px;
+    }
+
+    .nav-item:active {
+        background-image: none;
+        background-color: #fff;
+    }
+
+    .nav-item:active .nav-item-link {
+        color: var(--accent-color);
     }
 
     .nav-item-link {
@@ -447,7 +451,11 @@ body {
         color: #fff;
     }
 
-    .nav-mobile {
+    .nav-item-link:hover {
+        background-color: transparent;
+    }
+
+    .open-menu {
         display: initial;
     }
 

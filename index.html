@@ -10,19 +10,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script>
-        function openMenu() {
+            function openMenu() {
             document.getElementById("navBar").style.display = "flex";
             document.getElementById("navSection").style.backgroundColor = "var(--accent-color)";
             document.getElementById("mainHeader").style.color = "#fff";
+            document.getElementById("closeMenu").style.display = "initial";
         }
         function closeMenu() {
-            document.getElementById("navMobile").style.display = "none";
+            document.getElementById("navBar").style.display = "none";
+            document.getElementById("navSection").style.backgroundColor = "transparent";
+            document.getElementById("mainHeader").style.color = "#000";
+            document.getElementById("closeMenu").style.display = "none";
         }
     </script>
 </head>
 <body>
     <main class="main">
-        <section class="nav-section" id="navSection">
+        <nav class="nav-section" id="navSection">
             <a href="index.html" class="main-header-link">    
                  <h1 class="main-header" id="mainHeader">
                      Fashion Haus
@@ -36,10 +40,9 @@
                  <li class="nav-item"><a class="nav-item-link" href="#">Brands</a></li>
                  <li class="nav-item"><a class="nav-item-link" href="#">Latest News</a></li>
              </ul>
-             <div class="nav-mobile">
-                 <button class="menu" onclick="openMenu()"></button>
-             </div>
-        </section>
+            <button class="open-menu" onclick="openMenu()"></button>
+            <button class="close-menu" id="closeMenu" onclick="closeMenu()"></button>
+        </nav>
         <div class="content" id="content">
             <section class="fashion-fits-section" id="fashionFitsSection">
                 <div class="fashion-fits-description">
