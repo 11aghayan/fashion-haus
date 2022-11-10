@@ -27,135 +27,227 @@
     </script>
 </head>
 <body>
+    <nav class="nav-section padding" id="navSection">
+        <a href="index.html" class="main-header-link">    
+             <h1 class="main-header" id="mainHeader">
+                 Fashion Haus
+                 <div class="header-dash" id="headerDash"></div>
+             </h1>
+         </a> 
+         <ul class="navbar" id="navBar">
+             <li class="nav-item"><a class="nav-item-link" href="#fashionFitsSection">News Reel</a></li>
+             <li class="nav-item"><a class="nav-item-link" href="#bagSection">Bags</a></li>
+             <li class="nav-item"><a class="nav-item-link" href="#">Reviews</a></li>
+             <li class="nav-item"><a class="nav-item-link" href="#signUpSection">Sign up</a></li>
+             <li class="nav-item"><a class="nav-item-link" href="#">Brands</a></li>
+             <li class="nav-item"><a class="nav-item-link" href="#">Latest News</a></li>
+         </ul>
+        <button class="open-menu" onclick="openMenu()"></button>
+        <button class="close-menu" id="closeMenu" onclick="closeMenu()"></button>
+    </nav>
     <main class="main">
-        <nav class="nav-section" id="navSection">
-            <a href="index.html" class="main-header-link">    
-                 <h1 class="main-header" id="mainHeader">
-                     Fashion Haus
-                     <div class="header-dash" id="headerDash"></div>
-                 </h1>
-             </a> 
-             <ul class="navbar" id="navBar">
-                 <li class="nav-item"><a class="nav-item-link" href="#fashionFitsSection">News Reel</a></li>
-                 <li class="nav-item"><a class="nav-item-link" href="#bagSection">Bags</a></li>
-                 <li class="nav-item"><a class="nav-item-link" href="#">Reviews</a></li>
-                 <li class="nav-item"><a class="nav-item-link" href="#signUpSection">Sign up</a></li>
-                 <li class="nav-item"><a class="nav-item-link" href="#">Brands</a></li>
-                 <li class="nav-item"><a class="nav-item-link" href="#">Latest News</a></li>
-             </ul>
-            <button class="open-menu" onclick="openMenu()"></button>
-            <button class="close-menu" id="closeMenu" onclick="closeMenu()"></button>
-        </nav>
-        <div class="content" id="content">
-            <section class="fashion-fits-section" id="fashionFitsSection">
-                <div class="fashion-fits-description">
-                    <h2 class="fashion-fits-header-1 header">
-                        Fashion fits
-                        from the 
-                        big brands.
-                    </h2>
-                    <h2 class="fashion-fits-header-2 header">
-                        Fashion fits
-                        for all the 
-                        Stylers
-                    </h2>
-                    <p class="fashion-fits-para">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Fusce felis tellus, malesuada vel cursus et, sodales sit amet eros. 
-                        Integer sed justo ac dolor molestie.</p>
-                    <a href="#" class="fashion-fits-link">
-                        <p class="fashion-fits-learn-more">
+        <!-- Fashion fits -->
+        <section class="fashion-fits-section padding" id="fashionFitsSection">
+            <div class="fashion-fits-description">
+                <h2 class="fashion-fits-header-1 header">
+                    Fashion fits
+                    from the 
+                    big brands.
+                </h2>
+                <h2 class="fashion-fits-header-2 header">
+                    Fashion fits
+                    for all the 
+                    Stylers
+                </h2>
+                <p class="fashion-fits-para">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Fusce felis tellus, malesuada vel cursus et, sodales sit amet eros. 
+                    Integer sed justo ac dolor molestie.</p>
+                <a href="#" class="fashion-fits-link">
+                    <p class="fashion-fits-learn-more">
+                        Learn more
+                    </p>
+                </a>
+            </div>
+            <div class="asian-girl-div">
+                <img src="img/asian-girl.png" alt="asian girl" class="asian-girl-img">
+                <img src="img/dots.png" alt="dots" class="dots-asian-girl dots-asian-girl-top">
+                <img src="img/dots.png" alt="dots" class="dots-asian-girl dots-asian-girl-bottom">
+            </div>
+        </section>
+        <!-- Bags -->
+        <section class="bag-section padding" id="bagSection">
+            <header class="bags-header">
+                <p class="section-name">
+                    Information
+                </p>
+                <h2 class="know-your-bags header">
+                    Know your bags
+                </h2>
+            </header>
+            <div class="bag-types">
+                <a href="#" class="link">
+                    <article class="bag clutch">
+                        <img src="img/clutch.png" alt="clutch" class="clutch-img bag-img">
+                        <header class="bag-header header">
+                            The Clutch
+                        </header>
+                        <p class="bag-para para-color">
+                            Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. Fusce felis tellus, 
+                            malesuada vel cursus et, sodales sit amet eros. 
+                        </p>
+                        <p class="learn-more">
                             Learn more
                         </p>
-                    </a>
-                </div>
-                <div class="asian-girl-div">
-                    <img src="img/asian-girl.png" alt="asian girl" class="asian-girl-img">
-                    <img src="img/dots.png" alt="dots" class="dots-asian-girl dots-asian-girl-top">
-                    <img src="img/dots.png" alt="dots" class="dots-asian-girl dots-asian-girl-bottom">
-                </div>
-            </section>
-            <section class="bag-section" id="bagSection">
-                <header class="bags-header header">
-                    <p class="section-name">
-                        Information
-                    </p>
-                    <h2 class="know-your-bags">
-                        Know your bags
-                    </h2>
-                </header>
-                <div class="bag-types">
-                    <a href="#" class="link">
-                        <article class="bag clutch">
-                            <img src="img/clutch.png" alt="clutch" class="clutch-img bag-img">
-                            <header class="bag-header header">
-                                The Clutch
-                            </header>
-                            <p class="bag-para para-color">
-                                Lorem ipsum dolor sit amet, 
-                                consectetur adipiscing elit. Fusce felis tellus, 
-                                malesuada vel cursus et, sodales sit amet eros. 
-                            </p>
-                            <p class="learn-more">
-                                Learn more
-                            </p>
-                        </article>
-                    </a>
-                    <a href="#" class="link">
-                        <article class="bag backpack">
-                            <img src="img/backpack.png" alt="backpack" class="backpack-img bag-img">
-                            <header class="header bag-header">
-                                The Backpack
-                            </header>
-                            <p class="bag-para para-color">
-                                Lorem ipsum dolor sit amet, 
-                                consectetur adipiscing elit. Fusce felis tellus, 
-                                malesuada vel cursus et, sodales sit amet eros. 
-                            </p>
-                            <p class="learn-more">
-                                Learn more
-                            </p>
-                        </article>
-                    </a>
-                    <a href="#" class="link">
-                        <article class="bag traveller">
-                            <img src="img/traveller.png" alt="traveller" class="traveller-img bag-img">
-                            <header class="header bag-header">
-                                The Traveller
-                            </header>
-                            <p class="bag-para para-color">
-                                Lorem ipsum dolor sit amet, 
-                                consectetur adipiscing elit. Fusce felis tellus, 
-                                malesuada vel cursus et, sodales sit amet eros. 
-                            </p>
-                            <p class="learn-more">
-                                Learn more
-                            </p>
-                        </article>
-                    </a>
-                </div>
-            </section>
-            <section class="sign-up-section" id="signUpSection">
-              <div class="sign-up-bg">
-                <img src="img/dots.png" alt="dots" class="dots-sign-up top-dots-sign-up">
-                <img src="img/dots.png" alt="dots" class="dots-sign-up bottom-dots-sign-up">
-              </div>  
-              <div class="sign-up-description">
-                <h2 class="sign-up-header">
-                    Want fits?
-                    Join the mailing list.
-                </h2>
-                <p class="sign-up-para">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Fusce felis tellus, malesuada vel cursus et, 
-                    sodales sit amet eros. Integer sed justo ac dolor molestie.
+                    </article>
+                </a>
+                <a href="#" class="link">
+                    <article class="bag backpack">
+                        <img src="img/backpack.png" alt="backpack" class="backpack-img bag-img">
+                        <header class="header bag-header">
+                            The Backpack
+                        </header>
+                        <p class="bag-para para-color">
+                            Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. Fusce felis tellus, 
+                            malesuada vel cursus et, sodales sit amet eros. 
+                        </p>
+                        <p class="learn-more">
+                            Learn more
+                        </p>
+                    </article>
+                </a>
+                <a href="#" class="link">
+                    <article class="bag traveller">
+                        <img src="img/traveller.png" alt="traveller" class="traveller-img bag-img">
+                        <header class="header bag-header">
+                            The Traveller
+                        </header>
+                        <p class="bag-para para-color">
+                            Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. Fusce felis tellus, 
+                            malesuada vel cursus et, sodales sit amet eros. 
+                        </p>
+                        <p class="learn-more">
+                            Learn more
+                        </p>
+                    </article>
+                </a>
+            </div>
+        </section>
+        <!-- Reviews -->
+        <section class="reviews-section padding">
+            <div class="review-bg"></div>
+            <header class="reviews-header-div">
+                <p class="section-name">
+                    Reviews
                 </p>
-                <button class="sign-up-btn">
-                    Sign up now
-                </button>
-              </div>
-            </section>
-        </div>
+                <h2 class="header reviews-header">
+                    What you’ve 
+                    been saying
+                </h2>
+            </header>
+            <div class="reviews-content">
+                <article class="review">
+                    <img src="img/trisha-lion.png" alt="profile img" class="profile-img" width="96px" height="96px">
+                    <h3 class="reviewer-name">
+                        Trisha Lion                                
+                    </h3>
+                    <a href="#" class="item-link">
+                        <p class="item-name">
+                            Hermes Clutch
+                        </p>
+                    </a>
+                    <p class="review-main">
+                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Fusce felis tellus, malesuada vel cursus. Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit.”
+                    </p>
+                    <button class="shop-item-btn">
+                        Shop Item
+                    </button>
+                </article>
+                <article class="review">
+                    <img src="img/lionel-tech.png" alt="profile img" class="profile-img" width="96px" height="96px">
+                    <h3 class="reviewer-name">
+                        Trisha Lion                                
+                    </h3>
+                    <a href="#" class="item-link">
+                        <p class="item-name">
+                            Hermes Clutch
+                        </p>
+                    </a>
+                    <p class="review-main">
+                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Fusce felis tellus, malesuada vel cursus. Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit.”
+                    </p>
+                    <button class="shop-item-btn">
+                        Shop Item
+                    </button>
+                </article>
+                <article class="review">
+                    <img src="img/britney.png" alt="profile img" class="profile-img" width="96px" height="96px">
+                    <h3 class="reviewer-name">
+                        Trisha Lion                                
+                    </h3>
+                    <a href="#" class="item-link">
+                        <p class="item-name">
+                            Hermes Clutch
+                        </p>
+                    </a>
+                    <p class="review-main">
+                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Fusce felis tellus, malesuada vel cursus. Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit.”
+                    </p>
+                    <button class="shop-item-btn">
+                        Shop Item
+                    </button>
+                </article>
+                <article class="review">
+                    <img src="#" alt="profile img" class="profile-img" width="96px" height="96px">
+                    <h3 class="reviewer-name">
+                        Trisha Lion                                
+                    </h3>
+                    <a href="#" class="item-link">
+                        <p class="item-name">
+                            Hermes Clutch
+                        </p>
+                    </a>
+                    <p class="review-main">
+                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Fusce felis tellus, malesuada vel cursus. Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit.”
+                    </p>
+                    <button class="shop-item-btn">
+                        Shop Item
+                    </button>
+                </article>
+            </div>
+        </section>
+        <!-- Sign Up -->
+        <section class="sign-up-section " id="signUpSection">
+            <div class="sign-up-bg">
+            <img src="img/dots.png" alt="dots" class="dots-sign-up top-dots-sign-up">
+            <img src="img/dots.png" alt="dots" class="dots-sign-up bottom-dots-sign-up">
+            </div>  
+            <div class="sign-up-description">
+            <h2 class="sign-up-header">
+                Want fits?
+                Join the mailing list.
+            </h2>
+            <p class="sign-up-para">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Fusce felis tellus, malesuada vel cursus et, 
+                sodales sit amet eros. Integer sed justo ac dolor molestie.
+            </p>
+            <button class="sign-up-btn">
+                Sign up now
+            </button>
+            </div>
+        </section>
     </main>
 </body>
 </html>

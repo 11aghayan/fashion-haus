@@ -4,7 +4,8 @@
     4. Fashion Fits Section
     5.Bag Section
     6. Sign Up Section
-    7. Media
+    7. Reviews
+    8. Media
 */
 
 /** 1. General */
@@ -28,9 +29,8 @@ body {
     --para-color: #393F4D;
 }
 
-.content {
+.main {
     width: 100%;
-    padding: 0 150px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -72,11 +72,16 @@ body {
     left: 0;
 }
 
+.padding {
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
 /** 3. Nav Section */
 
 .nav-section {
     width: 100%;
-    padding: 22px 150px 0;
+    padding-top: 22px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -246,7 +251,7 @@ body {
 
 .bag-section {
     width: 100%;
-    padding: 90px 0 0;
+    padding-top: 90px;
 }
 
 .bags-header {
@@ -309,7 +314,129 @@ body {
     line-height: 28px;
 }
 
-/** 6. Sign Up Section*/
+/** 6. Reviews */
+
+.reviews-section {
+    padding-top: 170px;
+    padding-right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0;
+}
+
+.reviews-header {
+    font-size: 51px;
+    max-width: 408px;
+    margin-top: 26px;
+}
+
+.reviews-content {
+    width: 100%;
+    padding-top: 68px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 0 -17px;
+}
+
+.reviews-content::-webkit-scrollbar {
+    height: 5px;
+}
+
+.reviews-content::-webkit-scrollbar-track {
+    background-color: #d2d2d2;
+    border-radius: 70px;
+    box-shadow: inset 0 0 2px #393F4D;
+}
+
+.reviews-content::-webkit-scrollbar-thumb {
+    background-color: #393F4D;
+    border-radius: 70px;
+    width: 5px;
+}
+
+.reviews-content::-webkit-scrollbar-thumb:hover {
+    background-color: #6e6e6e;
+}
+
+.review {
+    margin: 0 17px;
+    width: 90%;
+    max-width: 466px;
+    background-color: #fff;
+    flex-shrink: 0;
+    padding: 25px 56px 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.745208px solid rgba(219, 179, 120, 0.4);
+    border-radius: 12px;
+}
+
+.profile-img {
+    border-radius: 50%;
+}
+
+.reviewer-name {
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 41px;
+    color: var(--header-color);
+    margin: 23px 0 0;
+}
+
+.item-name {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--accent-color);
+    margin: 13px 0 0;
+}
+.item-link {
+    text-decoration-line: none;
+}
+
+.item-link:hover {
+    text-decoration-line: underline;
+}
+
+.item-link:visited {
+    color: var(--accent-color);
+}
+
+
+.review-main {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 26px;
+    color: var(--para-color);
+    text-align: center;
+    margin: 15px 0 0;
+}
+
+.shop-item-btn {
+    color: var(--accent-color);
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 17.928px;
+    line-height: 100%;
+    border: 1px solid var(--accent-color);
+    border-radius: 70px;
+    padding: 19px 62px;
+    margin: 25px 0 0;
+}
+
+.shop-item-btn:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 11px 17px rgba(41, 69, 255, 0.2);
+}
+
+
+/** 7. Sign Up Section*/
 
 .sign-up-section {
     width: 100%;
@@ -396,13 +523,14 @@ body {
     background-color: var(--accent-color-active);
 }
 
-/** 7. Media */
+/** 8. Media */
 
 
 @media screen and (max-width: 1279px) {
 
-    .content {
-        padding: 0 25px;
+    .padding {
+        padding-left:25px;
+        padding-right:25px;
     }
 
     /** Nav Section */
@@ -545,6 +673,53 @@ body {
 
     .bag-section .learn-more::after {
         left: calc(50% - 10px);
+    }
+
+    /** Review Section */
+
+    .reviews-section {
+        padding-right: 0;
+    }
+
+    .reviews-content::-webkit-scrollbar {
+        height: 2px;
+    } 
+
+    .reviews-header {
+        font-size: 38px;
+        max-width: 225px;
+        margin-top: 14px;
+    }
+
+    .reviews-content {
+        padding-top: 24px;
+        margin: 0 -7px;
+    }
+    
+    .review {
+        margin: 0 7px;
+        padding: 17px 17px 24px;
+    }
+
+    .reviewer-name {
+        font-size: 24px;
+        line-height: 32px;
+        margin-top: 14px;
+    }
+
+    .item-name {
+        margin-top: 2px;
+    }
+
+    .review-main {
+        line-height: 20px;
+        margin-top: 9px;
+    }
+
+    .shop-item-btn {
+        font-size: 12px;
+        padding: 17px 94px;
+        margin-top: 13px;
     }
 
     /** Sign Up section */
