@@ -2,10 +2,11 @@
     2. Common
     3. Nav Section
     4. Fashion Fits Section
-    5.Bag Section
-    6. Sign Up Section
-    7. Reviews
-    8. Media
+    5. News reel Section
+    6. Bag Section
+    7. Sign Up Section
+    8. Reviews
+    9. Media
 */
 
 /** 1. General */
@@ -247,11 +248,86 @@ body {
     text-decoration: none;
 }
 
-/** 5. Bag Section */
+/**  5. News Reel Section */
+
+.news-section {
+    width: 100%;
+    padding-top: 73px;
+}
+
+.update-header {
+    margin-top: 26px;
+    font-size: 51px;
+}
+
+.news-content {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-article {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-article:nth-child(2) {
+    margin-top: 210px;
+    flex-direction: row-reverse;
+}
+
+.article-img {
+    position: relative;
+}
+
+.dots-news-img {
+    position: absolute;
+    top: -8%;
+    left: -9.4%;
+    z-index: -1;
+}
+
+.article-text {
+    display: inline-block;
+}
+
+.news-date {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25px;
+    color: #A5AEED;
+    margin-bottom: 3px;
+}
+
+.news-article-header-desktop {
+    font-size: 68px;
+    width: 100%;
+    max-width: 430px;
+}
+.news-article-header-mobile {
+    display: none;
+}
+
+.news-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--para-color);
+    margin: 25px 0 0;
+    width: 100%;
+    max-width: 395px;
+}
+
+.news-article .learn-more {
+    margin: 40px 0 0;
+}
+
+/** 6. Bag Section */
 
 .bag-section {
     width: 100%;
-    padding-top: 90px;
+    padding-top: 285px;
 }
 
 .bags-header {
@@ -302,9 +378,7 @@ body {
 
 .bag-header {
     margin: 35px 0 0;
-    font-weight: 600;
     font-size: 24px;
-    line-height: 111%;
 }
 
 .bag-para {
@@ -314,7 +388,7 @@ body {
     line-height: 28px;
 }
 
-/** 6. Reviews */
+/** 7. Reviews */
 
 .reviews-section {
     padding-top: 170px;
@@ -436,7 +510,7 @@ body {
 }
 
 
-/** 7. Sign Up Section*/
+/** 8. Sign Up Section*/
 
 .sign-up-section {
     width: 100%;
@@ -523,7 +597,7 @@ body {
     background-color: var(--accent-color-active);
 }
 
-/** 8. Media */
+/** 9. Media */
 
 
 @media screen and (max-width: 1279px) {
@@ -644,7 +718,7 @@ body {
     /** Bag Section */
 
     .bag-section {
-        padding: 55px 0 0;
+        padding: 150px 0 0;
     }
 
     .bags-header {
