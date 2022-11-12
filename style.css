@@ -4,9 +4,10 @@
     4. Fashion Fits Section
     5. News reel Section
     6. Bag Section
-    7. Sign Up Section
-    8. Reviews
-    9. Media
+    7. Reviews
+    8. Sign Up Section
+    9. Brands Section
+    10. Media
 */
 
 /** 1. General */
@@ -168,8 +169,6 @@ body {
     background-repeat: no-repeat;
     background-color: transparent
 }
-
-.open-menu
 
 /** 4. Fashion Fits Section */
 
@@ -600,7 +599,61 @@ body {
     background-color: var(--accent-color-active);
 }
 
-/** 9. Media */
+/** 9. Brands Section */
+
+.brands-section {
+    width: 100%;
+    padding-top: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.brands-header-div {
+    max-width: 408px;
+}
+
+.brands-header {
+    font-size: 51px;
+    margin-top: 25px;
+}
+
+.brand-logos-div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 38px -8px -12px;
+    justify-content: space-between;
+}
+
+.brand-logo-link {
+    width: 31%;
+    margin: 12px 8px;
+}
+
+.brand-logo-link:hover .brand-div {
+    background-color: var(--accent-color);
+    box-shadow: 0px 13px 20px rgba(41, 69, 255, 0.31);
+}
+
+.brand-logo-link:hover .brand-logo-img {
+    filter: invert(100%);
+}
+
+.brand-div {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12% 25%;
+}
+
+.brand-logo-img {
+    width: 100%;
+}
+
+/** 10. Media */
 
 
 @media screen and (max-width: 1279px) {
@@ -908,5 +961,35 @@ body {
         margin: 20px 0 0;
         font-size: 12px;
         padding: 17px 75px;
+    }
+
+    /** Brands Section */
+
+    .brands-section {
+        padding-top: 135px;
+    }
+
+    .brands-header-div {
+        max-width: 304px;
+    }
+
+    .brands-header {
+        font-size: 38px;
+        margin-top: 14px;
+    }
+
+    .brand-logos-div {
+        margin: 25px -8px -8px;
+    }
+
+    .brand-logo-link {
+        width: 44%;
+        margin: 8px;
+    }
+
+    .brand-div {
+        width: 100%;
+        border: 0.42623px solid rgba(0, 0, 0, 0.2);
+        border-radius: 8.52459px;
     }
 }
