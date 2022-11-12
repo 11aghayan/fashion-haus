@@ -9,43 +9,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script>
-            function openMenu() {
-            document.getElementById("navBar").style.display = "flex";
-            document.getElementById("navSection").style.backgroundColor = "var(--accent-color)";
-            document.getElementById("mainHeader").style.color = "#fff";
-            document.getElementById("closeMenu").style.display = "initial";
-            document.getElementById("headerDash").style.borderColor = "#fff";
-        }
-        function closeMenu() {
-            document.getElementById("navBar").style.display = "none";
-            document.getElementById("navSection").style.backgroundColor = "transparent";
-            document.getElementById("mainHeader").style.color = "#000";
-            document.getElementById("closeMenu").style.display = "none";
-            document.getElementById("headerDash").style.borderColor = "var(--accent-color)";
-        }
-    </script>
 </head>
 <body>
     <!-- !Nav Bar -->
-    <nav class="nav-section padding" id="navSection">
+    <header class="header-section padding" id="header-section">
         <a href="index.html" class="main-header-link">    
              <h1 class="main-header" id="mainHeader">
                  Fashion Haus
                  <div class="header-dash" id="headerDash"></div>
              </h1>
          </a> 
-         <ul class="navbar" id="navBar">
-             <li class="nav-item"><a class="nav-item-link" href="#newsSection">News Reel</a></li>
-             <li class="nav-item"><a class="nav-item-link" href="#bagSection">Bags</a></li>
-             <li class="nav-item"><a class="nav-item-link" href="#reviewSection">Reviews</a></li>
-             <li class="nav-item"><a class="nav-item-link" href="#signUpSection">Sign up</a></li>
-             <li class="nav-item"><a class="nav-item-link" href="#brandSection">Brands</a></li>
-             <li class="nav-item"><a class="nav-item-link" href="#">Latest News</a></li>
-         </ul>
-        <button class="open-menu-btn" onclick="openMenu()"></button>
-        <button class="close-menu-btn" id="closeMenu" onclick="closeMenu()"></button>
-    </nav>
+         
+    </header>
+    <nav class="main-navigation padding" mobile-visibility="false">
+        <ul class="navbar" id="navBar">
+            <li class="nav-item"><a class="nav-item-link" href="#newsSection">News Reel</a></li>
+            <li class="nav-item"><a class="nav-item-link" href="#bagSection">Bags</a></li>
+            <li class="nav-item"><a class="nav-item-link" href="#reviewSection">Reviews</a></li>
+            <li class="nav-item"><a class="nav-item-link" href="#signUpSection">Sign up</a></li>
+            <li class="nav-item"><a class="nav-item-link" href="#brandSection">Brands</a></li>
+            <li class="nav-item"><a class="nav-item-link" href="#">Latest News</a></li>
+        </nav>
+        <button class="menu-btn" menu-toggler="closed"></button>
     <main class="main">
         <!-- !Fashion fits -->
         <section class="fashion-fits-section padding" id="fashionFitsSection">
@@ -369,5 +354,6 @@
             </div>
         </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

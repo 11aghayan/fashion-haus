@@ -82,93 +82,7 @@ body {
 
 /** 3. Nav Section */
 
-.nav-section {
-    width: 100%;
-    padding-top: 22px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0;
-}
 
-.main-header {
-    color: #000;
-    font-weight: 600;
-    font-size: 26.4043px;
-    line-height: 100%;
-    margin: 0;
-    align-self: flex-start;
-    position: relative;
-}
-
-.header-dash {
-    width: 18px;
-    border: 2px solid var(--accent-color);
-    position: absolute;
-    bottom: 5px;
-    left: calc(100% + 4px);
-}
-
-.main-header-link {
-    text-decoration: none;
-}
-
-.navbar {
-    display: flex;
-    gap: 20px;
-    font-size: 0;
-    padding-top: 14px;
-}
-
-.nav-item-link {
-    text-decoration: none;
-    background-color: transparent;
-    color: #000;
-    border: none;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 100%;
-    padding: 14px 24px;
-}
-
-.nav-item-link:visited {
-    color: #000;
-}
-
-.nav-item-link:hover {
-    background-color: var(--accent-color);
-    color: var(--text-color);
-    border-radius: 24px;
-    cursor: pointer;
-}
-
-.open-menu-btn {
-    display: none;
-    appearance: none;
-    align-self: center;
-    width: 25px;
-    height: 25px;
-    background-color: transparent;
-    background-image: url(img/menu.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: none;
-    margin-right: 25px;
-    padding: 0;
-}
-
-.close-menu-btn {
-    display: none;
-    appearance: none;
-    width: 22px;
-    height: 22px;
-    margin-right: 25px;
-    border: none;
-    background-image: url(img/x.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: transparent
-}
 
 /** 4. Fashion Fits Section */
 
@@ -675,62 +589,6 @@ body {
         padding-right:25px;
     }
 
-    /** Nav Section */
-
-    .nav-section {
-        flex-wrap: wrap;
-        padding: 12px 0 0;
-        
-    }
-
-    .main-header {
-        padding-left: 25px;
-    }
-
-    .navbar {
-        display: none;
-        width: 100%;
-        padding: 0;
-        order: 5;
-        flex-direction: column;
-        margin-top: 60px;
-    }
-
-    .nav-item {
-        background-image: url(/img/mobile-menu.png);
-        background-position: -60px -30px;
-        padding: 0 25px;
-    }
-
-    .nav-item:active {
-        background-image: none;
-        background-color: var(--text-color);
-    }
-
-    .nav-item:active .nav-item-link {
-        color: var(--accent-color);
-    }
-
-    .nav-item-link {
-        padding: 0;
-        font-weight: 600;
-        font-size: 35px;
-        line-height: 80px;
-        color: var(--text-color);
-    }
-
-    .nav-item-link:visited {
-        color: var(--text-color);
-    }
-
-    .nav-item-link:hover {
-        background-color: transparent;
-    }
-
-    .open-menu {
-        display: initial;
-    }
-
     /** Fashion Fits Section */
 
     .fashion-fits-section {
@@ -1004,4 +862,73 @@ body {
         border: 0.42623px solid rgba(0, 0, 0, 0.2);
         border-radius: 8.52459px;
     }
+}
+
+@media (max-width: 767px) {
+   
+    .header-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-top: 12px;
+    background-color: var(--accent-color);
+    z-index: 111;
+   }
+
+   .header-section a {
+    text-decoration: none;
+   }
+
+   .main-header {
+    font-weight: 600;
+    font-size: 23.1636px;
+    line-height: 100%;
+    color: #fff;
+    margin: 0;
+   }
+
+   .menu-btn {
+    border: none;
+    width: 25px;
+    aspect-ratio: 1;
+    padding: 0;
+    background-image: url(img/menu.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+   } 
+
+   .main-navigation {
+    background-color: var(--accent-color);
+    padding-top: 60px;
+   }
+
+   .navbar {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+   }
+   
+   .navbar a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 80px;
+    color: #fff;
+   }
+
+   .navbar a:visited {
+    color: #fff;
+   }
+
+   .main-navigation[mobile-visibility="false"] {
+    transform: translateY(-100%);
+    display: none;
+   }
+
+   .main-navigation[mobile-visibility="true"] {
+    transform: translateY(0);
+    display: block;
+   }
 }
