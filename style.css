@@ -888,7 +888,7 @@ body {
     margin: 0;
    }
 
-   .menu-btn {
+   .menu-btn[menu="closed"] {
     border: none;
     width: 25px;
     aspect-ratio: 1;
@@ -898,6 +898,17 @@ body {
     background-repeat: no-repeat;
     background-color: white;
    } 
+
+   .menu-btn[menu="open"] {
+    border: none;
+    width: 20px;
+    aspect-ratio: 1;
+    padding: 0;
+    background-image: url(img/x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+   }
 
    .main-navigation {
     background-color: var(--accent-color);
