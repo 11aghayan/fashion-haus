@@ -18,16 +18,17 @@
     letter-spacing: -0.03em;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-}
-
 :root { 
     --accent-color: #2945FF;
     --accent-color-active: #1f37cf;
     --header-color: #000545;
-    --para-color: #393F4D;
+    --paragraph-color: #393F4D;
+    --text-color: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
 .main {
@@ -135,12 +136,12 @@ body {
 
 .nav-item-link:hover {
     background-color: var(--accent-color);
-    color: #fff;
+    color: var(--text-color);
     border-radius: 24px;
     cursor: pointer;
 }
 
-.open-menu {
+.open-menu-btn {
     display: none;
     appearance: none;
     align-self: center;
@@ -155,7 +156,7 @@ body {
     padding: 0;
 }
 
-.close-menu {
+.close-menu-btn {
     display: none;
     appearance: none;
     width: 22px;
@@ -168,6 +169,8 @@ body {
     background-color: transparent
 }
 
+.open-menu
+
 /** 4. Fashion Fits Section */
 
 .fashion-fits-section {
@@ -177,26 +180,26 @@ body {
     justify-content: space-between;
 }
 
-.asian-girl-div {
+.intro-img-div {
     position: relative;
 }
 
-.asian-girl-img {
+.intro-img {
     width: 100%;
     object-fit: contain;
 }
 
-.dots-asian-girl {
+.dots-intro-img {
     position: absolute;
 }
 
-.dots-asian-girl-top {
+.dots-intro-img-top {
     top: -5%;
     left: -9%;
     z-index: -1;
 }
 
-.dots-asian-girl-bottom {
+.dots-intro-img-bottom {
     bottom: -5%;
     right: -4.8%;
 }
@@ -214,8 +217,8 @@ body {
     display: none;
 }
 
-.fashion-fits-para {
-    color: var(--para-color);
+.fashion-fits-paragraph {
+    color: var(--paragraph-color);
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
@@ -226,7 +229,7 @@ body {
     margin: 24px 0 0;
     background-color: var(--accent-color);
     padding: 19px 42px;
-    color: #fff;
+    color: var(--text-color);
     font-weight: 600;
     font-size: 18px;
     line-height: 100%;
@@ -313,7 +316,7 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: var(--para-color);
+    color: var(--paragraph-color);
     margin: 25px 0 0;
     width: 100%;
     max-width: 395px;
@@ -355,9 +358,9 @@ body {
 }
 
 .bag:hover .bag-header, 
-.bag:hover .bag-para,
+.bag:hover .bag-paragraph,
 .bag:hover .learn-more {
-    color: #fff;
+    color: var(--text-color);
 }
 
 .link {
@@ -381,7 +384,7 @@ body {
     font-size: 24px;
 }
 
-.bag-para {
+.bag-paragraph {
     margin: 16px 0 0;
     font-weight: 400;
     font-size: 14px;
@@ -485,7 +488,7 @@ body {
     font-weight: 300;
     font-size: 12px;
     line-height: 26px;
-    color: var(--para-color);
+    color: var(--paragraph-color);
     text-align: center;
     margin: 15px 0 0;
 }
@@ -504,7 +507,7 @@ body {
 
 .shop-item-btn:hover {
     background-color: var(--accent-color);
-    color: #fff;
+    color: var(--text-color);
     cursor: pointer;
     box-shadow: 0px 11px 17px rgba(41, 69, 255, 0.2);
 }
@@ -564,21 +567,21 @@ body {
     font-weight: 600;
     font-size: 68px;
     line-height: 111%;
-    color: #fff;
+    color: var(--text-color);
 }
 
-.sign-up-para {
+.sign-up-paragraph {
     margin: 15px 0 0;
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
-    color: #fff;
+    color: var(--text-color);
 }
 
 .sign-up-btn {
     margin: 50px 0 0;
     background-color: var(--accent-color);
-    color: #fff;
+    color: var(--text-color);
     font-weight: 600;
     font-size: 18px;
     line-height: 100%;
@@ -636,7 +639,7 @@ body {
 
     .nav-item:active {
         background-image: none;
-        background-color: #fff;
+        background-color: var(--text-color);
     }
 
     .nav-item:active .nav-item-link {
@@ -648,11 +651,11 @@ body {
         font-weight: 600;
         font-size: 35px;
         line-height: 80px;
-        color: #fff;
+        color: var(--text-color);
     }
 
     .nav-item-link:visited {
-        color: #fff;
+        color: var(--text-color);
     }
 
     .nav-item-link:hover {
@@ -673,16 +676,16 @@ body {
         gap: 50px;
     }
 
-    .asian-girl-div {
+    .intro-img-div {
         margin: 0 10px;
     }
 
-    .dots-asian-girl {
+    .dots-intro-img {
         width: 25%;
         height: 32%;
     }
 
-    .dots-asian-girl-top {
+    .dots-intro-img-top {
         top: -5.6%;
         left: -6.7%;
     }
@@ -699,7 +702,7 @@ body {
         display: block;
     }
     
-    .fashion-fits-para {
+    .fashion-fits-paragraph {
         font-size: 16px;
         margin: 24px 0 0;
     }
@@ -812,7 +815,7 @@ body {
         align-items: center;
     }
 
-    .bag-para {
+    .bag-paragraph {
         text-align: center;
     }
 
@@ -892,7 +895,7 @@ body {
         font-size: 37px;
     }
 
-    .sign-up-para {
+    .sign-up-paragraph {
         margin: 6px 0 0;
         font-size: 10px;
         line-height: 173%;
@@ -901,7 +904,7 @@ body {
     .sign-up-btn {
         width: 100%;
         background-color: transparent;
-        border: 1px solid #fff;
+        border: 1px solid var(--text-color);
         margin: 20px 0 0;
         font-size: 12px;
         padding: 17px 75px;

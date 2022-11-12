@@ -27,6 +27,7 @@
     </script>
 </head>
 <body>
+    <!-- !Nav Bar -->
     <nav class="nav-section padding" id="navSection">
         <a href="index.html" class="main-header-link">    
              <h1 class="main-header" id="mainHeader">
@@ -42,8 +43,8 @@
              <li class="nav-item"><a class="nav-item-link" href="#">Brands</a></li>
              <li class="nav-item"><a class="nav-item-link" href="#">Latest News</a></li>
          </ul>
-        <button class="open-menu" onclick="openMenu()"></button>
-        <button class="close-menu" id="closeMenu" onclick="closeMenu()"></button>
+        <button class="open-menu-btn" onclick="openMenu()"></button>
+        <button class="close-menu-btn" id="closeMenu" onclick="closeMenu()"></button>
     </nav>
     <main class="main">
         <!-- !Fashion fits -->
@@ -59,7 +60,7 @@
                     for all the 
                     Stylers
                 </h2>
-                <p class="fashion-fits-para">
+                <p class="fashion-fits-paragraph">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Fusce felis tellus, malesuada vel cursus et, sodales sit amet eros. 
                     Integer sed justo ac dolor molestie.</p>
@@ -69,10 +70,10 @@
                     </p>
                 </a>
             </div>
-            <div class="asian-girl-div">
-                <img src="img/asian-girl.png" alt="asian girl" class="asian-girl-img">
-                <img src="img/dots.png" alt="dots" class="dots-asian-girl dots-asian-girl-top">
-                <img src="img/dots.png" alt="dots" class="dots-asian-girl dots-asian-girl-bottom">
+            <div class="intro-img-div">
+                <img src="img/asian-girl.png" alt="asian girl" class="intro-img">
+                <img src="img/dots.png" alt="dots" class="dots-intro-img dots-intro-img-top">
+                <img src="img/dots.png" alt="dots" class="dots-intro-img dots-intro-img-bottom">
             </div>
         </section>
         <!-- !News Reel -->
@@ -163,12 +164,12 @@
             </header>
             <div class="bag-types">
                 <a href="#" class="link">
-                    <article class="bag clutch">
-                        <img src="img/clutch.png" alt="clutch" class="clutch-img bag-img">
+                    <article class="bag">
+                        <img src="img/clutch.png" alt="clutch" class="bag-img">
                         <header class="bag-header header">
                             The Clutch
                         </header>
-                        <p class="bag-para para-color">
+                        <p class="bag-paragraph paragraph-color">
                             Lorem ipsum dolor sit amet, 
                             consectetur adipiscing elit. Fusce felis tellus, 
                             malesuada vel cursus et, sodales sit amet eros. 
@@ -179,12 +180,12 @@
                     </article>
                 </a>
                 <a href="#" class="link">
-                    <article class="bag backpack">
-                        <img src="img/backpack.png" alt="backpack" class="backpack-img bag-img">
+                    <article class="bag">
+                        <img src="img/backpack.png" alt="backpack" class="bag-img">
                         <header class="header bag-header">
                             The Backpack
                         </header>
-                        <p class="bag-para para-color">
+                        <p class="bag-paragraph paragraph-color">
                             Lorem ipsum dolor sit amet, 
                             consectetur adipiscing elit. Fusce felis tellus, 
                             malesuada vel cursus et, sodales sit amet eros. 
@@ -195,12 +196,12 @@
                     </article>
                 </a>
                 <a href="#" class="link">
-                    <article class="bag traveller">
-                        <img src="img/traveller.png" alt="traveller" class="traveller-img bag-img">
+                    <article class="bag">
+                        <img src="img/traveller.png" alt="traveller" class="bag-img">
                         <header class="header bag-header">
                             The Traveller
                         </header>
-                        <p class="bag-para para-color">
+                        <p class="bag-paragraph paragraph-color">
                             Lorem ipsum dolor sit amet, 
                             consectetur adipiscing elit. Fusce felis tellus, 
                             malesuada vel cursus et, sodales sit amet eros. 
@@ -214,7 +215,6 @@
         </section>
         <!-- !Reviews -->
         <section class="reviews-section padding" id="reviewSection">
-            <div class="review-bg"></div>
             <header class="reviews-header-div">
                 <p class="section-name">
                     Reviews
@@ -226,7 +226,7 @@
             </header>
             <div class="reviews-content">
                 <article class="review">
-                    <img src="img/trisha-lion.png" alt="profile img" class="profile-img" width="96px" height="96px">
+                    <img src="img/trisha-lion.png" alt="profile photo" class="profile-img" width="96px" height="96px">
                     <h3 class="reviewer-name">
                         Trisha Lion                                
                     </h3>
@@ -245,7 +245,7 @@
                     </button>
                 </article>
                 <article class="review">
-                    <img src="img/lionel-tech.png" alt="profile img" class="profile-img" width="96px" height="96px">
+                    <img src="img/lionel-tech.png" alt="profile photo" class="profile-img" width="96px" height="96px">
                     <h3 class="reviewer-name">
                         Trisha Lion                                
                     </h3>
@@ -264,7 +264,7 @@
                     </button>
                 </article>
                 <article class="review">
-                    <img src="img/britney.png" alt="profile img" class="profile-img" width="96px" height="96px">
+                    <img src="img/britney.png" alt="profile photo" class="profile-img" width="96px" height="96px">
                     <h3 class="reviewer-name">
                         Trisha Lion                                
                     </h3>
@@ -283,7 +283,7 @@
                     </button>
                 </article>
                 <article class="review">
-                    <img src="#" alt="profile img" class="profile-img" width="96px" height="96px">
+                    <img src="#" alt="profile photo" class="profile-img" width="96px" height="96px">
                     <h3 class="reviewer-name">
                         Trisha Lion                                
                     </h3>
@@ -314,7 +314,7 @@
                 Want fits?
                 Join the mailing list.
             </h2>
-            <p class="sign-up-para">
+            <p class="sign-up-paragraph">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 Fusce felis tellus, malesuada vel cursus et, 
                 sodales sit amet eros. Integer sed justo ac dolor molestie.
