@@ -2,9 +2,12 @@
     2. Common
     3. Nav Section
     4. Fashion Fits Section
-    5.Bag Section
-    6. Sign Up Section
-    7. Media
+    5. News reel Section
+    6. Bag Section
+    7. Reviews
+    8. Sign Up Section
+    9. Brands Section
+    10. Media
 */
 
 /** 1. General */
@@ -16,21 +19,21 @@
     letter-spacing: -0.03em;
 }
 
+:root { 
+    --accent-color: #2945FF;
+    --accent-color-active: #1f37cf;
+    --header-color: #000545;
+    --paragraph-color: #393F4D;
+    --text-color: #fff;
+}
+
 body {
     margin: 0;
     padding: 0;
 }
 
-:root { 
-    --accent-color: #2945FF;
-    --accent-color-active: #1f37cf;
-    --header-color: #000545;
-    --para-color: #393F4D;
-}
-
-.content {
+.main {
     width: 100%;
-    padding: 0 150px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -72,95 +75,14 @@ body {
     left: 0;
 }
 
+.padding {
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
 /** 3. Nav Section */
 
-.nav-section {
-    width: 100%;
-    padding: 22px 150px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0;
-}
 
-.main-header {
-    color: #000;
-    font-weight: 600;
-    font-size: 26.4043px;
-    line-height: 100%;
-    margin: 0;
-    align-self: flex-start;
-    position: relative;
-}
-
-.header-dash {
-    width: 18px;
-    border: 2px solid var(--accent-color);
-    position: absolute;
-    bottom: 5px;
-    left: calc(100% + 4px);
-}
-
-.main-header-link {
-    text-decoration: none;
-}
-
-.navbar {
-    display: flex;
-    gap: 20px;
-    font-size: 0;
-    padding-top: 14px;
-}
-
-.nav-item-link {
-    text-decoration: none;
-    background-color: transparent;
-    color: #000;
-    border: none;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 100%;
-    padding: 14px 24px;
-}
-
-.nav-item-link:visited {
-    color: #000;
-}
-
-.nav-item-link:hover {
-    background-color: var(--accent-color);
-    color: #fff;
-    border-radius: 24px;
-    cursor: pointer;
-}
-
-.open-menu {
-    display: none;
-    appearance: none;
-    align-self: center;
-    width: 25px;
-    height: 25px;
-    background-color: transparent;
-    background-image: url(img/menu.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: none;
-    margin-right: 25px;
-    padding: 0;
-}
-
-.close-menu {
-    display: none;
-    appearance: none;
-    width: 22px;
-    height: 22px;
-    margin-right: 25px;
-    border: none;
-    background-image: url(img/x.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: transparent
-}
 
 /** 4. Fashion Fits Section */
 
@@ -171,26 +93,26 @@ body {
     justify-content: space-between;
 }
 
-.asian-girl-div {
+.intro-img-div {
     position: relative;
 }
 
-.asian-girl-img {
+.intro-img {
     width: 100%;
     object-fit: contain;
 }
 
-.dots-asian-girl {
+.dots-intro-img {
     position: absolute;
 }
 
-.dots-asian-girl-top {
+.dots-intro-img-top {
     top: -5%;
     left: -9%;
     z-index: -1;
 }
 
-.dots-asian-girl-bottom {
+.dots-intro-img-bottom {
     bottom: -5%;
     right: -4.8%;
 }
@@ -208,8 +130,8 @@ body {
     display: none;
 }
 
-.fashion-fits-para {
-    color: var(--para-color);
+.fashion-fits-paragraph {
+    color: var(--paragraph-color);
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
@@ -220,7 +142,7 @@ body {
     margin: 24px 0 0;
     background-color: var(--accent-color);
     padding: 19px 42px;
-    color: #fff;
+    color: var(--text-color);
     font-weight: 600;
     font-size: 18px;
     line-height: 100%;
@@ -242,11 +164,87 @@ body {
     text-decoration: none;
 }
 
-/** 5. Bag Section */
+/**  5. News Reel Section */
+
+.news-section {
+    width: 100%;
+    padding-top: 73px;
+    background-color: #F4F5FF;
+}
+
+.update-header {
+    margin-top: 26px;
+    font-size: 51px;
+}
+
+.news-content {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-article {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-article:nth-child(2) {
+    margin-top: 210px;
+    flex-direction: row-reverse;
+}
+
+.article-img {
+    position: relative;
+}
+
+.dots-news-img {
+    position: absolute;
+    top: -8%;
+    left: -9.4%;
+    z-index: -1;
+}
+
+.article-text {
+    display: inline-block;
+}
+
+.news-date {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25px;
+    color: #A5AEED;
+    margin-bottom: 3px;
+}
+
+.news-article-header-desktop {
+    font-size: 68px;
+    width: 100%;
+    max-width: 430px;
+}
+.news-article-header-mobile {
+    display: none;
+}
+
+.news-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--paragraph-color);
+    margin: 25px 0 0;
+    width: 100%;
+    max-width: 395px;
+}
+
+.news-article .learn-more {
+    margin: 40px 0 0;
+}
+
+/** 6. Bag Section */
 
 .bag-section {
     width: 100%;
-    padding: 90px 0 0;
+    padding-top: 285px;
 }
 
 .bags-header {
@@ -274,9 +272,9 @@ body {
 }
 
 .bag:hover .bag-header, 
-.bag:hover .bag-para,
+.bag:hover .bag-paragraph,
 .bag:hover .learn-more {
-    color: #fff;
+    color: var(--text-color);
 }
 
 .link {
@@ -297,32 +295,160 @@ body {
 
 .bag-header {
     margin: 35px 0 0;
-    font-weight: 600;
     font-size: 24px;
-    line-height: 111%;
 }
 
-.bag-para {
+.bag-paragraph {
     margin: 16px 0 0;
     font-weight: 400;
     font-size: 14px;
     line-height: 28px;
 }
 
-/** 6. Sign Up Section*/
+/** 7. Reviews */
+
+.reviews-section {
+    padding-top: 170px;
+    padding-right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0;
+    background-color: #FFF9F0;
+}
+
+.reviews-header {
+    font-size: 51px;
+    max-width: 408px;
+    margin-top: 26px;
+}
+
+.reviews-content {
+    width: 100%;
+    padding-top: 68px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 0 -17px;
+}
+
+.reviews-content::-webkit-scrollbar {
+    height: 5px;
+}
+
+.reviews-content::-webkit-scrollbar-track {
+    background-color: #d2d2d2;
+    border-radius: 70px;
+    box-shadow: inset 0 0 2px #393F4D;
+}
+
+.reviews-content::-webkit-scrollbar-thumb {
+    background-color: #393F4D;
+    border-radius: 70px;
+    width: 5px;
+}
+
+.reviews-content::-webkit-scrollbar-thumb:hover {
+    background-color: #6e6e6e;
+}
+
+.review {
+    margin: 0 17px;
+    width: 90%;
+    max-width: 466px;
+    background-color: #fff;
+    flex-shrink: 0;
+    padding: 25px 56px 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.745208px solid rgba(219, 179, 120, 0.4);
+    border-radius: 12px;
+}
+
+.profile-img {
+    border-radius: 50%;
+}
+
+.reviewer-name {
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 41px;
+    color: var(--header-color);
+    margin: 23px 0 0;
+}
+
+.item-name {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--accent-color);
+    margin: 13px 0 0;
+}
+.item-link {
+    text-decoration-line: none;
+}
+
+.item-link:hover {
+    text-decoration-line: underline;
+}
+
+.item-link:visited {
+    color: var(--accent-color);
+}
+
+
+.review-main {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 26px;
+    color: var(--paragraph-color);
+    text-align: center;
+    margin: 15px 0 0;
+}
+
+.shop-item-btn {
+    color: var(--accent-color);
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 17.928px;
+    line-height: 100%;
+    border: 1px solid var(--accent-color);
+    border-radius: 70px;
+    padding: 19px 62px;
+    margin: 25px 0 0;
+}
+
+.shop-item-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    cursor: pointer;
+    box-shadow: 0px 11px 17px rgba(41, 69, 255, 0.2);
+}
+
+
+/** 8. Sign Up Section*/
 
 .sign-up-section {
     width: 100%;
-    max-width: 1140px;
-    margin-top: 130px;
-    position: relative;
+    padding-top: 130px;
+    background-color: #FFF9F0;
+    display: flex;
+    justify-content: center;
+    z-index: -111;
 }
 
 .sign-up-bg {
-    background-image: url(img/boy.png);
-    background-size: cover;
-    padding-top: 63%;
+    width: 100%;
+    max-width: 1440px;
     position: relative;
+}
+
+.sign-up-bg-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .sign-up-bg::after {
@@ -363,21 +489,21 @@ body {
     font-weight: 600;
     font-size: 68px;
     line-height: 111%;
-    color: #fff;
+    color: var(--text-color);
 }
 
-.sign-up-para {
+.sign-up-paragraph {
     margin: 15px 0 0;
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
-    color: #fff;
+    color: var(--text-color);
 }
 
 .sign-up-btn {
     margin: 50px 0 0;
     background-color: var(--accent-color);
-    color: #fff;
+    color: var(--text-color);
     font-weight: 600;
     font-size: 18px;
     line-height: 100%;
@@ -396,69 +522,71 @@ body {
     background-color: var(--accent-color-active);
 }
 
-/** 7. Media */
+/** 9. Brands Section */
+
+.brands-section {
+    font-size: 0;
+    width: 100%;
+    padding-top: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.brands-header-div {
+    max-width: 408px;
+}
+
+.brands-header {
+    font-size: 51px;
+    margin-top: 25px;
+}
+
+.brand-logos-div {
+    font-size: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 38px -8px -12px;
+    justify-content: space-between;
+}
+
+.brand-logo-link {
+    width: 31%;
+    margin: 12px 8px;
+}
+
+.brand-logo-link:hover .brand-div {
+    background-color: var(--accent-color);
+    box-shadow: 0px 13px 20px rgba(41, 69, 255, 0.31);
+}
+
+.brand-logo-link:hover .brand-logo-img {
+    filter: invert(100%);
+}
+
+.brand-div {
+    font-size: 0;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12% 25%;
+}
+
+.brand-logo-img {
+    width: 100%;
+}
+
+/** 10. Media */
 
 
 @media screen and (max-width: 1279px) {
 
-    .content {
-        padding: 0 25px;
-    }
-
-    /** Nav Section */
-
-    .nav-section {
-        flex-wrap: wrap;
-        padding: 12px 0 0;
-        
-    }
-
-    .main-header {
-        padding-left: 25px;
-    }
-
-    .navbar {
-        display: none;
-        width: 100%;
-        padding: 0;
-        order: 5;
-        flex-direction: column;
-        margin-top: 60px;
-    }
-
-    .nav-item {
-        background-image: url(/img/mobile-menu.png);
-        background-position: -60px -30px;
-        padding: 0 25px;
-    }
-
-    .nav-item:active {
-        background-image: none;
-        background-color: #fff;
-    }
-
-    .nav-item:active .nav-item-link {
-        color: var(--accent-color);
-    }
-
-    .nav-item-link {
-        padding: 0;
-        font-weight: 600;
-        font-size: 35px;
-        line-height: 80px;
-        color: #fff;
-    }
-
-    .nav-item-link:visited {
-        color: #fff;
-    }
-
-    .nav-item-link:hover {
-        background-color: transparent;
-    }
-
-    .open-menu {
-        display: initial;
+    .padding {
+        padding-left:25px;
+        padding-right:25px;
     }
 
     /** Fashion Fits Section */
@@ -471,16 +599,16 @@ body {
         gap: 50px;
     }
 
-    .asian-girl-div {
+    .intro-img-div {
         margin: 0 10px;
     }
 
-    .dots-asian-girl {
+    .dots-intro-img {
         width: 25%;
         height: 32%;
     }
 
-    .dots-asian-girl-top {
+    .dots-intro-img-top {
         top: -5.6%;
         left: -6.7%;
     }
@@ -497,7 +625,7 @@ body {
         display: block;
     }
     
-    .fashion-fits-para {
+    .fashion-fits-paragraph {
         font-size: 16px;
         margin: 24px 0 0;
     }
@@ -513,10 +641,81 @@ body {
         box-shadow: none;
     }
 
+    /** News Reel Section */
+
+    .news-section {
+        padding-top: 110px;
+    }
+
+    .news-article {
+        flex-direction: column;
+    }
+
+    .news-article:nth-child(2) {
+        margin-top: 110px;
+        flex-direction: column;
+    }
+
+    .news-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .news-content .news-article:first-child .article-img .dots-news-img:nth-child(2) {
+        top: -24px;
+        right: -15px;
+        left: auto;
+    }
+
+    .news-content .news-article:first-child .article-img .dots-news-img:nth-child(3) {
+        top: auto;
+        left: -15px;
+        bottom: -24px;
+    }
+
+    .news-content .news-article:last-child .article-img .dots-news-img:nth-child(2) {
+        top: -24px;
+        left: -15px;
+    }
+
+    .news-content .news-article:last-child .article-img .dots-news-img:nth-child(3) {
+        top: auto;
+        bottom: -24px;
+        right: -15px;
+        left: auto;
+    }
+
+    .news-date {
+        display: none;
+    }
+
+    .news-article-header-desktop {
+        font-size: 51px;
+        margin-top: 50px;
+    }
+
+    .news-article-header-desktop-top {
+        display: none;
+    }
+
+    .news-article-header-mobile {
+        display: block;
+        font-size: 51px;
+        margin-top: 50px;
+    }
+
+    .news-text-bottom {
+        display: none;
+    }
+
+    .news-article .learn-more {
+        margin: 20px 0 0;
+    }
+
     /** Bag Section */
 
     .bag-section {
-        padding: 55px 0 0;
+        padding: 150px 0 0;
     }
 
     .bags-header {
@@ -539,7 +738,7 @@ body {
         align-items: center;
     }
 
-    .bag-para {
+    .bag-paragraph {
         text-align: center;
     }
 
@@ -547,10 +746,57 @@ body {
         left: calc(50% - 10px);
     }
 
+    /** Review Section */
+
+    .reviews-section {
+        padding-right: 0;
+    }
+
+    .reviews-content::-webkit-scrollbar {
+        height: 2px;
+    } 
+
+    .reviews-header {
+        font-size: 38px;
+        max-width: 225px;
+        margin-top: 14px;
+    }
+
+    .reviews-content {
+        padding-top: 24px;
+        margin: 0 -7px;
+    }
+    
+    .review {
+        margin: 0 7px;
+        padding: 17px 17px 24px;
+    }
+
+    .reviewer-name {
+        font-size: 24px;
+        line-height: 32px;
+        margin-top: 14px;
+    }
+
+    .item-name {
+        margin-top: 2px;
+    }
+
+    .review-main {
+        line-height: 20px;
+        margin-top: 9px;
+    }
+
+    .shop-item-btn {
+        font-size: 12px;
+        padding: 17px 94px;
+        margin-top: 13px;
+    }
+
     /** Sign Up section */
 
     .sign-up-section {
-        margin-top: 40px;
+        padding: 40px 0 0;
     }
 
     .dots-sign-up {
@@ -572,7 +818,7 @@ body {
         font-size: 37px;
     }
 
-    .sign-up-para {
+    .sign-up-paragraph {
         margin: 6px 0 0;
         font-size: 10px;
         line-height: 173%;
@@ -581,9 +827,123 @@ body {
     .sign-up-btn {
         width: 100%;
         background-color: transparent;
-        border: 1px solid #fff;
+        border: 1px solid var(--text-color);
         margin: 20px 0 0;
         font-size: 12px;
         padding: 17px 75px;
     }
+
+    /** Brands Section */
+
+    .brands-section {
+        padding-top: 135px;
+    }
+
+    .brands-header-div {
+        max-width: 304px;
+    }
+
+    .brands-header {
+        font-size: 38px;
+        margin-top: 14px;
+    }
+
+    .brand-logos-div {
+        margin: 25px -8px -8px;
+    }
+
+    .brand-logo-link {
+        width: 44%;
+        margin: 8px;
+    }
+
+    .brand-div {
+        width: 100%;
+        border: 0.42623px solid rgba(0, 0, 0, 0.2);
+        border-radius: 8.52459px;
+    }
+}
+
+@media (max-width: 767px) {
+   
+    .header-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-top: 12px;
+   }
+
+   .header-section[menu="open"] {
+    background-color: var(--accent-color);
+   }
+
+   .header-section[menu="open"] .main-header{
+    color: #fff;
+   }
+
+   .header-section a {
+    text-decoration: none;
+   }
+
+   .main-header {
+    font-weight: 600;
+    font-size: 23.1636px;
+    line-height: 100%;
+    color: #000;
+    margin: 0;
+   }
+
+   .menu-btn {
+    border: none;
+    width: 25px;
+    aspect-ratio: 1;
+    padding: 0;
+    background-image: url(img/menu.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    transition: 0.5s;
+   } 
+
+   .menu-btn[menu="open"] {
+    border: none;
+    width: 20px;
+    aspect-ratio: 1;
+    padding: 0;
+    background-image: url(img/x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+   }
+
+   .main-navigation {
+    background-color: var(--accent-color);
+    padding-top: 60px;
+    transform: translateY(-100%);
+    display: none;
+   }
+
+   .main-navigation[mobile-visibility="true"] {
+    transform: translateY(0);
+    display: block;
+   }
+
+   .navbar {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+   }
+   
+   .navbar a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 80px;
+    color: #fff;
+   }
+
+   .navbar a:visited {
+    color: #fff;
+   }
 }
