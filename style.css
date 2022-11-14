@@ -7,7 +7,8 @@
     7. Reviews
     8. Sign Up Section
     9. Brands Section
-    10. Media
+    10. Latest News Section
+    11. Media
 */
 
 /** 1. General */
@@ -579,7 +580,162 @@ body {
     width: 100%;
 }
 
-/** 10. Media */
+/** 10. Latest News Section */
+
+.latest-news-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 104px;
+}
+
+.latest-news-intro-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.latest-news-header {
+    font-size: 34px;
+}
+
+.latest-news-intro-paragraph {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--paragraph-color);
+    margin: 0;
+    max-width: 720px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.latest-news-content-div {
+    padding-top: 90px;
+    display: flex;
+}
+
+.latest-news-content-div .img-div {
+    margin-left: 48px;
+    position: relative;
+}
+
+.latest-news-content-div .img-div .dots {
+    position: absolute;
+    top: -30px;
+    left: -48px;
+    z-index: -11;
+}
+
+.news-div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 110px;
+}
+
+.news-div .news {
+    padding: 30px 0;
+    border-top: 1px solid #E2E2E2;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-div .news:last-child{
+    border-bottom: 1px solid #E2E2E2;;
+}
+
+.toggler-header-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.news-div .toggler {
+    background-color: var(--accent-color);
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    margin-right: 23px;
+    position: relative;
+}
+
+.news-div .toggler[condition="open"] {
+    background-color: transparent;
+    border: 2px solid #DBDBDB;
+}
+
+.news-div .toggler:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.news-div .toggler .horizontal-line {
+    width: 50%;
+    height: 4px;
+    background-color: var(--text-color);
+    position: absolute;
+    left: 26%;
+    top: calc(50% - 2px)
+}
+
+.news-div .toggler[condition="open"] .horizontal-line {
+    background-color: var(--accent-color);
+}
+
+.news-div .toggler .vertical-line {
+    height: 50%;
+    width: 4px;
+    background-color: var(--text-color);
+    position: absolute;
+    left: calc(50% - 2px);
+    top: 26%;
+    display: block;
+}
+
+.news-div .toggler[condition="open"] .vertical-line{
+    display: none;
+}
+
+.news-div .news-header {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000;
+    margin: 0;
+    max-width: 370px;
+}
+
+.news-div .news-p-part {
+    height: 0;
+    margin-left: 71px;
+    transition: 0.5s;
+}
+
+.news-div .news-p-part[visibility="true"] {
+    height: 118px;
+    transition: 0.5s;
+}
+
+.news-div .news-p-part p {
+    display: none;
+}
+
+.news-div .news-p-part[visibility="true"] p {
+    display: block;
+}
+
+
+.news-div .news-paragraph {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--paragraph-color);
+    margin-top: 14px;
+    max-width: 350px;
+}
+
+/** 11. Media */
 
 
 @media screen and (max-width: 1279px) {

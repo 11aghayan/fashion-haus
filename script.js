@@ -42,3 +42,18 @@ button.addEventListener("click", () => {
     }
     
 );
+
+const toggler = document.querySelector(".toggler");
+const pPart = document.querySelector(".news-p-part");
+
+toggler.addEventListener("click", () => {
+    const togglerCondition = toggler.getAttribute("condition");
+
+    if (togglerCondition === "closed") {
+        toggler.setAttribute("condition", "open");
+        pPart.setAttribute("visibility", "true");
+    } else {
+        toggler.setAttribute("condition", "closed");
+        pPart.setAttribute("visibility", "false");
+    }
+})
