@@ -614,6 +614,7 @@ body {
 .latest-news-content-div {
     padding-top: 90px;
     display: flex;
+    justify-content: space-between;
 }
 
 .latest-news-content-div .img-div {
