@@ -46,21 +46,17 @@ button.addEventListener("click", () => {
 const toggler = document.querySelectorAll(".toggler");
 const pPart = document.querySelectorAll(".news-p-part");
 
-toggler.forEach((i) => {
-    
-    i.addEventListener("click", () => {
-        const togglerCondition = i.getAttribute("condition");
+
+toggler.forEach((x, i) => {
+    x.addEventListener("click", () => {
+        const togglerCondition = x.getAttribute("condition");
 
         if (togglerCondition === "closed") {
-            i.setAttribute("condition", "open");
-            pPart.forEach((x) => {
-                x.setAttribute("visibility", "true");
-            });
+            x.setAttribute("condition", "open");
+            pPart[i].setAttribute("visibility", "true");
         } else {
-            i.setAttribute("condition", "closed");
-            pPart.forEach((x) => {
-                x.setAttribute("visibility", "false");
-            });
+            x.setAttribute("condition", "closed");
+            pPart[i].setAttribute("visibility", "false");
         }
     })
 });
