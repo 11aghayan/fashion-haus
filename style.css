@@ -83,7 +83,9 @@ body {
 
 /** 3. Nav Section */
 
-
+.header-nav-container {
+    font-size: 0;
+}
 
 /** 4. Fashion Fits Section */
 
@@ -622,6 +624,10 @@ body {
     position: relative;
 }
 
+.latest-news-img {
+    width: 100%;
+}
+
 .latest-news-content-div .img-div .dots {
     position: absolute;
     top: -30px;
@@ -659,6 +665,7 @@ body {
     border-radius: 50%;
     margin-right: 23px;
     position: relative;
+    flex-shrink: 0;
 }
 
 .news-div .toggler[condition="open"] {
@@ -677,7 +684,7 @@ body {
     background-color: var(--text-color);
     position: absolute;
     left: 26%;
-    top: calc(50% - 2px)
+    top: calc(50% - 2px);
 }
 
 .news-div .toggler[condition="open"] .horizontal-line {
@@ -1019,11 +1026,33 @@ body {
         border: 0.42623px solid rgba(0, 0, 0, 0.2);
         border-radius: 8.52459px;
     }
+
+    /** Latest News Section */
+    .latest-news-content-div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .latest-news-content-div .news-div {
+        width: 100%;
+    }
+
+    .latest-news-content-div .news-div {
+        margin: 44px 0 0;
+    }
+
+    .news-div .news {
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 550px), (max-width:1000px) {
+    
 }
 
 
 
-@media (max-width: 550px) {
+@media screen and (max-width: 550px) {
    
     .header-section {
     display: flex;
@@ -1084,7 +1113,8 @@ body {
     background-color: var(--accent-color);
     padding-top: 0px;
     height: 0;
-    transition: 0.5s;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
    }
 
    .main-navigation[mobile-visibility="true"] {
