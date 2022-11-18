@@ -7,23 +7,21 @@ function click (btn) {
     btn.addEventListener("click", () => {
         const buttonCondition = button.getAttribute("menu");
         const navVisible = document.querySelector(".navbar");
-        const navHeight = navVisible.offsetHeight + 60 + "px";
         
             if (buttonCondition === "closed") {
                 navBar.setAttribute("mobile-visibility", "true");
-                navBar.style.height = navHeight;
                 button.setAttribute("menu", "open");
                 header.setAttribute("menu", "open");
                 navVisible.setAttribute("navbar-visibility", "true");
+                navBar.style.height = navVisible.offsetHeight + 60 + "px";
             } else {
                 navBar.setAttribute("mobile-visibility", "false");
-                navBar.style.height = 0;
                 button.setAttribute("menu", "closed");
                 header.setAttribute("menu", "closed");
                 navVisible.setAttribute("navbar-visibility", "false");
+                navBar.style.height = 0;
             }
         }
-
     );
 };
 
