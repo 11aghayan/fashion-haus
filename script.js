@@ -1,50 +1,42 @@
 const navBar = document.querySelector(".main-navigation");
 const button = document.querySelector(".menu-btn");
 const header = document.querySelector(".header-section");
+const link = document.querySelectorAll(".nav-item-link");
 
-
-
-button.addEventListener("click", () => {
-            const buttonCondition = button.getAttribute("menu");
-            const navVisible = document.querySelector(".navbar");
-  
-            async function navSummon () {        
-                if (navVisible.getAttribute("navbar-visibility") === "false") {
-                    await openMenu();
-                    
-                    navVisible.setAttribute("navbar-visibility", "true");
-                } else {
-                    navVisible.setAttribute("navbar-visibility", "false");
-                }
-            }
-
-            async function openMenu () {
+function click (btn) {
+    btn.addEventListener("click", () => {
+        const buttonCondition = button.getAttribute("menu");
+        const navVisible = document.querySelector(".navbar");
+        const navHeight = navVisible.offsetHeight + 60 + "px";
+        
             if (buttonCondition === "closed") {
                 navBar.setAttribute("mobile-visibility", "true");
+                navBar.style.height = navHeight;
                 button.setAttribute("menu", "open");
                 header.setAttribute("menu", "open");
-
-                return new Promise((resolve) => {
-                    setTimeout(() => {
-                        resolve(openMenu);
-                    }, 500);
-    
-                })
+                navVisible.setAttribute("navbar-visibility", "true");
             } else {
                 navBar.setAttribute("mobile-visibility", "false");
+                navBar.style.height = 0;
                 button.setAttribute("menu", "closed");
                 header.setAttribute("menu", "closed");
+                navVisible.setAttribute("navbar-visibility", "false");
             }
         }
 
-        openMenu();
-        navSummon();
-    }
-    
-);
+    );
+};
+
+click(button);
+link.forEach((i) => {
+    click(i);
+});
+
+
 
 const toggler = document.querySelectorAll(".toggler");
 const pPart = document.querySelectorAll(".news-p-part");
+
 
 
 toggler.forEach((x, i) => {
