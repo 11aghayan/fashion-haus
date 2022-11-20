@@ -28,6 +28,7 @@
     --header-color: #000545;
     --paragraph-color: #393F4D;
     --text-color: #fff;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -65,7 +66,8 @@ body {
     font-size: 16px;
     line-height: 100%;
     color: var(--accent-color, #2945FF);
-    margin: 15px 0 0;
+    margin: 0;
+    padding-top: 15px;
     position: relative;
 }
 
@@ -87,8 +89,8 @@ body {
 
 .header-section {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; 
+    place-items: center;
     padding-top: 30px;
 }
 
@@ -102,7 +104,7 @@ body {
     line-height: 100%;
     color: #000;
     margin: 0;
-    transition: 0.6s;
+    transition: color 300ms;
     position: relative;
 }
 
@@ -113,6 +115,7 @@ body {
     border-top: 0.17em solid var(--accent-color);    
     bottom: 2px;
     left: calc(100% + 4px);
+    transition: border-top-color 300ms;
 }
 
 
@@ -138,7 +141,6 @@ body {
 
 .nav-item {
     margin: 0 20px;
-    padding: 14px 24px;
     border-radius: 24px;
     height: 100%;
     text-align: center;
@@ -150,10 +152,13 @@ body {
 }
 
 .nav-link {
+    width: 100%;
+    padding: 14px 24px;
     font-weight: 600;
     font-size: 15px;
     line-height: 100%;
     color: #000;
+    display: inline-block;
 }
 
 .nav-item:hover .nav-link {
@@ -245,8 +250,35 @@ body {
 .news-section {
     width: 100%;
     padding-top: 73px;
+    padding-bottom: 73px;
     background-color: #F4F5FF;
+    scroll-margin-top: -60px;
+    position: relative;
 }
+
+.news-section::before {
+    content: "";
+    position: absolute;
+    top: -150px;
+    left: 0;
+    border-top: 80px solid transparent;
+    border-bottom: 150px solid #F4F5FF;
+    border-right: 99vw solid #F4F5FF;
+    z-index: -111111;
+}
+
+.news-section::after {
+    content: "";
+    position: absolute;
+    bottom: -200px;
+    right: 0;
+    border-top: 200px solid #F4F5FF;
+    border-bottom: 80px solid transparent;
+    border-left: 99vw solid #F4F5FF;
+    z-index: -111111;
+}
+
+
 
 .update-header {
     margin-top: 26px;
@@ -321,6 +353,7 @@ body {
 .bag-section {
     width: 100%;
     padding-top: 285px;
+    scroll-margin-top: -270px;
 }
 
 .bags-header {
@@ -392,6 +425,7 @@ body {
     align-items: flex-start;
     font-size: 0;
     background-color: #FFF9F0;
+    scroll-margin-top: -160px;
 }
 
 .reviews-header {
@@ -513,7 +547,7 @@ body {
     background-color: #FFF9F0;
     display: flex;
     justify-content: center;
-    z-index: -111;
+    scroll-margin-top: -50px;
 }
 
 .sign-up-bg {
@@ -607,6 +641,7 @@ body {
     padding-top: 250px;
     display: flex;
     flex-direction: column;
+    scroll-margin-top: -235px;
 }
 
 .brands-header-div {
@@ -683,8 +718,9 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding-top: 104px;
+    padding-top: 105px;
     padding-bottom: 100px;
+    scroll-margin-top: -60px;
 }
 
 .latest-news-intro-text {
@@ -818,7 +854,6 @@ body {
 }
 
 .news-div .news-p-part[visibility="true"] {
-    height: 155px;
     transition: 0.5s;
 }
 
@@ -836,8 +871,9 @@ body {
     font-size: 16px;
     line-height: 24px;
     color: var(--paragraph-color);
-    margin-top: 14px;
+    padding-top: 14px;
     max-width: 350px;
+    margin: 0;
 }
 
 /** 11. Stats Section */
@@ -978,11 +1014,25 @@ position: relative;
     }
 
     /** Header-Nav */
+    
     .header-section {
         flex-direction: column;
         align-items: flex-start;
         position: relative;
         padding: 12px 0 0;
+    }
+
+    .header-section::after {
+        content: "";
+        width: 50%;
+        height: 100%;
+        background-color: var(--accent-color);
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 200ms;
     }
     
     .main-header {
@@ -990,22 +1040,22 @@ position: relative;
     }
 
     .menu-btn {
-    display: block;
-    position: absolute;
-    top: 12px;
-    right: 25px;
-    z-index: 11;
+        display: block;
+        position: absolute;
+        top: 12px;
+        right: 25px;
+        z-index: 11;
     } 
 
     .menu-btn[menu="open"] {
         border: none;
         width: 20px;
-        aspect-ratio: 1;
+        aspect-ratio: 1 / 1;
         padding: 0;
         background-image: url(img/x.png);
         background-size: contain;
         background-repeat: no-repeat;
-        transition: 0.5s;
+        transition: 300ms;
     }
 
     .main-navigation {
@@ -1013,10 +1063,14 @@ position: relative;
         padding: 0;
         background-color: var(--accent-color);
         height: 0;
+        overflow: hidden;
+        display: none;
+        transition: height 300ms;
     }
 
     .main-navigation[mobile-visibility="true"] {
         padding-top: 40px;
+        display: block;
     }
 
     .navbar {
@@ -1047,6 +1101,7 @@ position: relative;
         font-size: 35px;
         line-height: 80px;
         color: var(--text-color);
+        padding: 16px 0;
     }
 
     .nav-item:active .nav-link {
@@ -1056,7 +1111,7 @@ position: relative;
     /** Fashion Fits Section */
 
     .fashion-fits-section {
-        margin: 70px 0 0;
+        margin: 70px 0 110px;
         display: flex;
         justify-content: space-between;
         flex-direction: column-reverse;
@@ -1109,6 +1164,7 @@ position: relative;
 
     .news-section {
         padding-top: 110px;
+        scroll-margin-top: -100px;
     }
 
     .news-article {
@@ -1179,12 +1235,12 @@ position: relative;
     /** Bag Section */
 
     .bag-section {
-        padding: 150px 0 0;
+        padding-top: 150px;
+        scroll-margin-top: -140px;
     }
 
     .bags-header {
         gap: 15px;
-        padding-left: 10px;
     }
 
     .know-your-bags {
@@ -1214,6 +1270,7 @@ position: relative;
 
     .reviews-section {
         padding-right: 0;
+        scroll-margin-top: -160px;
     }
 
     .reviews-content::-webkit-scrollbar {
@@ -1261,6 +1318,7 @@ position: relative;
 
     .sign-up-section {
         padding: 40px 0 0;
+        scroll-margin-top: -50px;
     }
 
     .dots-sign-up {
@@ -1301,6 +1359,7 @@ position: relative;
 
     .brands-section {
         padding-top: 135px;
+        scroll-margin-top: -125px;
     }
 
     .brands-header-div {
@@ -1383,12 +1442,29 @@ position: relative;
 }
 
 @media screen and (min-width: 550px) and (max-width:1279px) {
+    .header-section[menu="open"]::after  {
+        opacity: 1;
+    }
+
     .main-navigation {
         width: 50%;
     }
 }
 
 @media screen and (max-width: 549px){
+    .header-section[menu="open"]::after {
+        width: 100%;
+        opacity: 1; 
+    }
+
+    .header-section[menu="open"] .main-header {
+        color: var(--text-color);
+    }
+
+    .header-section[menu="open"] .main-header::after {
+        border-top-color: var(--text-color);
+    }
+
     .main-navigation {
         width: 100%;
     }
