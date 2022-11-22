@@ -36,12 +36,37 @@ body {
     padding: 0;
 }
 
+::-webkit-scrollbar {
+    width: .6em;
+    height: .6em;
+}
+
+::-webkit-scrollbar-track {
+    background: #bfc0c7;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #393F4D;
+    border: .1em solid #bfc0c7;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #717378;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #494b53;
+}
+
 .main {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     font-size: 0;
+    overflow-x: hidden;
 }
 
 /** 2. Common */
@@ -88,6 +113,7 @@ body {
 /** 3. Nav Section */
 
 .header-section {
+    width: 100%;
     display: flex;
     justify-content: space-between; 
     place-items: center;
@@ -263,7 +289,7 @@ body {
     left: 0;
     border-top: 80px solid transparent;
     border-bottom: 150px solid #F4F5FF;
-    border-right: 99vw solid #F4F5FF;
+    border-right: calc(100vw - 0.6em) solid #F4F5FF;
     z-index: -111111;
 }
 
@@ -274,11 +300,9 @@ body {
     right: 0;
     border-top: 200px solid #F4F5FF;
     border-bottom: 80px solid transparent;
-    border-left: 99vw solid #F4F5FF;
+    border-left: calc(100vw - 0.6em) solid #F4F5FF;
     z-index: -111111;
 }
-
-
 
 .update-header {
     margin-top: 26px;
@@ -330,6 +354,7 @@ body {
     width: 100%;
     max-width: 430px;
 }
+
 .news-article-header-mobile {
     display: none;
 }
@@ -353,6 +378,7 @@ body {
 .bag-section {
     width: 100%;
     padding-top: 285px;
+    padding-bottom: 170px;
     scroll-margin-top: -270px;
 }
 
@@ -417,7 +443,7 @@ body {
 /** 7. Reviews */
 
 .reviews-section {
-    padding-top: 170px;
+    padding-top: 20px;
     padding-right: 0;
     width: 100%;
     display: flex;
@@ -426,6 +452,18 @@ body {
     font-size: 0;
     background-color: #FFF9F0;
     scroll-margin-top: -160px;
+    position: relative;
+}
+
+.reviews-section::before {
+    content: '';
+    border-top: 100px solid transparent;
+    border-bottom: 150px solid #FFF9F0;
+    border-left: calc(100vw - 0.6em) solid #FFF9F0;
+    z-index: -111;
+    position: absolute;
+    top: -100px;
+    left: 0;
 }
 
 .reviews-header {
@@ -548,6 +586,18 @@ body {
     display: flex;
     justify-content: center;
     scroll-margin-top: -50px;
+    position: relative;
+}
+
+.sign-up-section::after {
+    content: "";
+    position: absolute;
+    border-top: 150px solid #FFF9F0;
+    border-bottom: 80px solid transparent;
+    border-right: calc(100vw - 0.6em) solid #FFF9F0;
+    bottom: -230px;
+    left: 0;
+    z-index: -1111;
 }
 
 .sign-up-bg {
@@ -886,6 +936,18 @@ body {
     display: flex;
     justify-content: space-between;
     background-color: #F4F5FF;
+    position: relative;
+}
+
+.stats-section::before {
+    content: "";
+    position: absolute;
+    border-top: 80px solid transparent;
+    border-bottom: 150px solid #F4F5FF;
+    border-right: calc(100vw - 0.6em) solid #F4F5FF;
+    top: -80px;
+    left: 0;
+    z-index: -1111;
 }
 
 .stat {
@@ -1064,13 +1126,14 @@ position: relative;
         background-color: var(--accent-color);
         height: 0;
         overflow: hidden;
-        display: none;
         transition: height 300ms;
+        position: absolute;
+        z-index: 111;
+        top: 100%;
     }
 
     .main-navigation[mobile-visibility="true"] {
         padding-top: 40px;
-        display: block;
     }
 
     .navbar {
@@ -1165,6 +1228,18 @@ position: relative;
     .news-section {
         padding-top: 110px;
         scroll-margin-top: -100px;
+    }
+
+    .news-section::before {
+        top: -50px;
+        border-top: 50px solid transparent;
+        border-left: 100vw  solid #F4F5FF;
+        border-right: none;
+    }
+    
+    .news-section::after {
+        bottom: -80px;
+        border-top: 80px solid #F4F5FF;
     }
 
     .news-article {
@@ -1273,6 +1348,17 @@ position: relative;
         scroll-margin-top: -160px;
     }
 
+    .reviews-section::before {
+        content: '';
+        border-top: 80px solid transparent;
+        border-bottom: 130px solid #FFF9F0;
+        border-left: 100vw solid #FFF9F0;
+        z-index: -111;
+        position: absolute;
+        top: -80px;
+        left: 0;
+    }
+
     .reviews-content::-webkit-scrollbar {
         height: 2px;
     } 
@@ -1319,6 +1405,14 @@ position: relative;
     .sign-up-section {
         padding: 40px 0 0;
         scroll-margin-top: -50px;
+    }
+
+    .sign-up-section::after {
+        border-top: 150px solid #FFF9F0;
+        border-bottom: 50px solid transparent;
+        border-left: 100vw solid #FFF9F0;
+        border-right: none;
+        bottom: -100px;
     }
 
     .dots-sign-up {
@@ -1387,7 +1481,7 @@ position: relative;
     /** Latest News Section */
 
     .latest-news-section {
-        padding-bottom: 50px;
+        padding-bottom: 140px;
     }
 
     .latest-news-content-div {
@@ -1413,6 +1507,11 @@ position: relative;
         padding-top: 50px;
         margin-top: -70px;
         flex-direction: column;
+    }
+
+    .stats-section::before {
+        border-top: 30px solid transparent;
+        top: -30px;
     }
 
     .icon-img {
